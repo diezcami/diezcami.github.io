@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Camille Diez]]></title>
+  <link href="http://diezcami.github.io/blog/atom.xml" rel="self"/>
+  <link href="http://diezcami.github.io/blog/"/>
+  <updated>2015-05-23T14:55:31+08:00</updated>
+  <id>http://diezcami.github.io/blog/</id>
+  <author>
+    <name><![CDATA[Camille Diez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Quick Guide to Aliasing Terminal Commands]]></title>
+    <link href="http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands/"/>
+    <updated>2015-05-19T02:34:25+08:00</updated>
+    <id>http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands</id>
+    <content type="html"><![CDATA[<p>This guide will probably only be useful to you if you find yourself using the <strong>Terminal</strong> a lot whether on Linux/OS X. Here, I&rsquo;ll be talking about aliases and how you could use them in your daily work to maximize your productivity and, to an extent, maintain your sanity while working with a mountain of commands.</p>
+
+<!-- more -->
+
+
+<h2>What is Aliasing?</h2>
+
+<p>Aliasing a command is rather self explanatory - it&rsquo;s the act of defining a nickname or alias to a certain set of commands via the Terminal. For instance, take a look at the following command I&rsquo;ve been using frequently these past few days:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>g++ -std=c++11 *.cpp -o output</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As someone who started compiling C++ with <code>make</code> and only recently moved on to <code>g++</code> to handle multiple files, the additional <code>std=c++11</code> parameter was simply too tedious for me to type every time I wanted to compile a project on a new Terminal window. Call me lazy, but I&rsquo;ve been spoiled with the likes of <code>javac</code>, <code>ruby</code> and <code>python</code> for a couple of years now, and would like to have a similarly short compile command for C++. Luckily, a Terminal command actually exists to cure my predicament:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>alias g++11="g++ -std=c++11"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>alias</code> command is pretty straightforward - it aliases the text <code>g++ -std=c++11</code> into an alias <code>g++11</code>. From now on, as long as I remain in the same Terminal window, I can compile files in C++ with the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>g++11 *.cpp -o output</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It&rsquo;s important to know that these <code>alias</code> commands will only remain in effect while the terminal windows they&rsquo;ve been typed in remain open. This probably wouldn&rsquo;t bother you if you don&rsquo;t plan on using the defined aliases beyond the timeline of a short project - if you find yourself needing to use multiple commands on a daily basis, however, you&rsquo;ll be glad to know there&rsquo;s a way to permanently retain these aliases.</p>
+
+<h2>For Linux</h2>
+
+<p>To make aliases permanent in Linux or any of its distros, just append the <code>alias</code> commands to the end of your <code>.bashrc</code> file. To do this, open a Terminal window, type <code>nano ~/.bashrc</code> and append your <code>alias</code> commands to the end of the file. You can add multiple aliases, though you&rsquo;d probably want to leave comments for each of them to avoid getting them mixed up.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~/.bashrc
+</span><span class='line'># This is a comment, by the way. You can use it to label your aliases.
+</span><span class='line'>...
+</span><span class='line'>
+</span><span class='line'># This alias is for compiling C++ files.
+</span><span class='line'>alias g++11="g++ -std=c++11"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you&rsquo;re done, save the file using <code>Ctrl+X</code>, <code>Y</code>, and <code>Enter</code>. Restart your Terminal or your machine, and you&rsquo;ll find that <code>g++11</code> or whatever aliases you&rsquo;ve declared are now permanently recognized by the system. To remove an alias, open the <code>.bashrc</code> file again and delete any alias entries you no longer want to keep.</p>
+
+<h2>For OS X</h2>
+
+<p>The procedure retain aliases in OS X is similar to that of Linux; however, the <code>alias</code> commands need to be entered in the <code>.bash_profile</code> file instead <code>.bashrc</code>. To do this, open terminal and type <code>nano ~/.bash_profile</code> and append your <code>alias</code> commands to the end of the file. Like Linux, you can add comments as well as multiple aliases to the <code>.bash_profile</code> file.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~/.bash_profile
+</span><span class='line'>...
+</span><span class='line'># The process is exactly the same!
+</span><span class='line'>alias g++11="g++ -std=c++11"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you&rsquo;re done, save the file using <code>Ctrl+X</code>, <code>Y</code>, and <code>Return</code>. Afterwards, restart your Terminal or machine, and you&rsquo;re done! The removal process is also the same as that of Linux. As a final note, be careful not to alias your commands with the names of existing commands.</p>
+
+<p>Thanks for reading my guide!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why Learning How to Program Is Hard]]></title>
+    <link href="http://diezcami.github.io/blog/2015/05/11/why-programming-is-hard/"/>
+    <updated>2015-05-11T15:14:57+08:00</updated>
+    <id>http://diezcami.github.io/blog/2015/05/11/why-programming-is-hard</id>
+    <content type="html"><![CDATA[<p>I believe learning how to program is manageable in this day and age, with just about every answer being one google search away - there&rsquo;s a multitude of free books, videos and even courses available online for any topic under programming, and even a website literally created to have people solve any kind of programming inquiry or problem you&rsquo;ve had. Despite this, it&rsquo;s not uncommon to hear people say how programming is difficult, and (for the extremes) how anyone who says otherwise is a liar.</p>
+
+<p>Don&rsquo;t get me wrong; while I do think it&rsquo;s manageable, I still believe learning how to program can easily be made difficult due to a certain trend of circumstances - take it from someone who got a C in an introductory course to programming.</p>
+
+<!--more-->
+
+
+<p>What&rsquo;s easy to forget after learning numerous languages, frameworks and concepts is how daunting programming looks to someone not familiar with it. The start of anyone&rsquo;s programming career, which mainly involves learning a programming language, can be daunting enough to weed a significant number of people away from the industry. For instance, take a look at the &ldquo;Hello World&rdquo; code of Java, a relatively common language both in the industry and as a coding language of instruction.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>public class Main {
+</span><span class='line'>  public static void main (String args[]) {
+</span><span class='line'>      System.out.println ("Hello, World!");
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When I first typed this, I absolutely could not fathom what was going on, and could only infer what the code meant from cue words like <code>println</code>. When I checked google for the meaning of the rest of the syntax, I saw concepts such as classes, the main method, access modifiers, string arrays and even <code>return</code> in the simplest explanations among the top search results. Then again, no matter how simple an explanation could be for these concepts, it&rsquo;d be daunting for anyone who just learned how to compile code to read about them, let alone remember them.</p>
+
+<p>Eventually, I accepted that I would come across numerous concepts that would be cleared up in time, and how I simply had to stick it out until it&rsquo;s appropriate to learn them. The practice of typing foreign syntax that &ldquo;just worked&rdquo; continued to the point where I did not know or care about what constituted a good, working code. My priorities then shifted from understanding every line of code I&rsquo;ve written to just getting the program to compile. Afterall, I found it difficult to care about the syntax of my code when my course then focused on honing my problem solving skills, and gave me perfect marks in spite of submitting badly written code.</p>
+
+<p>My main point in sharing my experience is to demonstrate a small subset of what a person has to juggle when <strong>beginning</strong> to learn how to program. Aside from learning the syntax of a language with no sense of familiarity whatsoever, new programmers are also expected to become accustomed to problem solving methods that aren&rsquo;t common to life outside code (eg. Nested loops, recursion), to learn core concepts (eg. OOP), and to remember good coding practices (eg. usage of global variables, remembering built-in methods and data types, reading API). These standards, when unaccompanied by the guidance of a <em>capable</em> professor or tutor, do not only push a person to their learning limit - they also force him to stick through the constant feelings of frustration, inadequacy and being overwhelmed without any promise of things eventually getting easier. After all, it wouldn&rsquo;t be unreasonable for people of any aptitude to expect the beginning and adjusting period of learning a practice to be simple and unaccompanied with a large amount of negativity.</p>
+
+<p>What people don&rsquo;t normally expect is how the learning curve, while unending, eventually becomes less steep - instead, thoughts of how programming &ldquo;just isn&rsquo;t for them&rdquo; or &ldquo;is just too hard&rdquo; flow through their heads with the constant negativity they&rsquo;re subjected to. Combine this with being exposed to people who seem to know what they&rsquo;re doing with their code and seem to just &ldquo;get&rdquo; programming, and you&rsquo;ll understand why it&rsquo;s not uncommon for people to drop out of CS or programming early as a whole.</p>
+
+<p>I&rsquo;d like to conclude with a message to anyone currently in the process of learning how to program for the first time: the frustration is normal, no matter how fundamental knowing primitive data types, learning how to create method signatures or other basic concepts may be. People honestly don&rsquo;t give enough credit to learning the basics as opposed to learning the more advanced concepts of programming, and that&rsquo;s normal as well. The feeling of &ldquo;not being good enough&rdquo; or &ldquo;not knowing enough&rdquo; will eventually be remedied by getting the hang of programming as a whole, which can only be done over time. The indicator of a good programmer is not someone who knows the whole breadth and depth of all programming concepts, but someone constantly able to adapt to any kind of new technology that pops up in the industry.</p>
+
+<p>That being said, relax! Programming is a one trick pony that makes you know less as you learn more - and the sooner you&rsquo;re comfortable with coding and the uncertainty that comes with it, the better you&rsquo;ll become at handling any kind of problem thrown at you in time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[C++ Pointers and References: An Overview]]></title>
+    <link href="http://diezcami.github.io/blog/2015/05/08/c-plus-plus-pointers-and-references-an-overview/"/>
+    <updated>2015-05-08T11:33:15+08:00</updated>
+    <id>http://diezcami.github.io/blog/2015/05/08/c-plus-plus-pointers-and-references-an-overview</id>
+    <content type="html"><![CDATA[<p>References and pointers are usually, in one way or another, implemented in every programming language; higher level languages, however, most likely do not provide explicit access to them. As a result, they often come up implicitly in the form of garbage collection and simpler OOP conventions. On the other hand, languages that have more freedom at lower levels such as C/C++ allow users to explicitly use pointers and references to manually control several aspects of a program including, but not limited to memory management/allocation, OOP and ease of access.</p>
+
+<p>This guide is split into two parts - here, I&rsquo;ll be going through a basic overview on pointers and references understandable to anyone with knowledge on basic programming in any language and minor C++ syntax (mainly std, cout and endl).</p>
+
+<!-- more -->
+
+
+<h2>Pointers</h2>
+
+<p>Every declared variable in a program, whether primitive or not, is stored in memory and has its own memory address in the form of a hexadecimal number (0x). These variables are normally accessed by identifiers they&rsquo;ve been declared with, paying no attention to its location in memory. To access the memory address of a variable in C++, we use the referencing operator <code>&amp;</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>std::string foo = "foo";
+</span><span class='line'>std::cout &lt;&lt; &foo &lt;&lt; std::endl; // output: memory address of foo</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A <strong>Pointer</strong> is a variable that holds a memory address. Its behavior is relatable to how entries in a table of contents contain page numbers or addresses that lead to actual content. It can be declared with or without being defined using <code>data_type *identifier</code>. To get the variable stored in a pointer, we use the dereferencing operator <code>*</code>. Note that the <code>*</code> being used as an operator and as part of a pointer&rsquo;s declaration are independent of each other.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>int num = 10;
+</span><span class='line'>int *foo;
+</span><span class='line'>int bar*; 
+</span><span class='line'>std::cout &lt;&lt; foo &lt;&lt; std::endl; // output: 0x0 (null memory address)
+</span><span class='line'>
+</span><span class='line'>foo = &num; 
+</span><span class='line'>std::cout &lt;&lt; foo &lt;&lt; std::endl; // output: memory address of num
+</span><span class='line'>std::cout &lt;&lt; *foo &lt;&lt; std::endl; //output: 10</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pointers are not limited to being assigned by memory addresses derived from the <code>&amp;</code> operator - they can also be assigned with the memory addresses stored in other pointers. If a pointer is assigned to another pointer, any changes to the variable stored in the common memory address will reflect on the <code>*</code> operation of either pointer. This behavior is reminiscent of how objects are handled handled in Java;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>std::string qux = "Tempura";
+</span><span class='line'>std::string *foo, *bar;
+</span><span class='line'>
+</span><span class='line'>foo = &qux;
+</span><span class='line'>bar = foo;
+</span><span class='line'>std::cout &lt;&lt; *foo &lt;&lt; std::endl; // output: Tempura
+</span><span class='line'>std::cout &lt;&lt; *bar &lt;&lt; std:: endl; // output: Tempura
+</span><span class='line'>
+</span><span class='line'>qux = "Tonkatsu";
+</span><span class='line'>std::cout &lt;&lt; *foo &lt;&lt; std::endl; // output: Tonkatsu
+</span><span class='line'>std::cout &lt;&lt; *bar &lt;&lt; std:: endl; // output: Tonkatsu</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The deferencing operator <code>*</code> can also be used at the left hand side of operations to replace the values stored in a pointer or memory address. The referencing operator <code>&amp;</code>, however, cannot as it would not make sense to reallocate where a variable would be stored in memory. The following is a continuation of the code snippet above:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// Recall that foo = &qux
+</span><span class='line'>*foo = "Gyudon";
+</span><span class='line'>std::cout &lt;&lt; qux &lt;&lt; std::endl; // output: Gyudon</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Pointer Practices</h2>
+
+<p>When using pointers regardless of how simple its applications are, it&rsquo;s paramount to take caution in remembering where a pointer comes from and goes towards during assignments. Carelessness here will lead to dangling pointers and memory leaks, which can be detrimental to your program&rsquo;s performance at best, and your whole computer&rsquo;s at worst. As good practice, the two main points to remember when using pointers are the following:</p>
+
+<ul>
+<li><strong>Deallocating memory</strong> used by an object a pointer points to using <code>delete pointer_to_obj</code> or <code>delete[] pointer_to_obj</code> after its usage to avoid memory leaks</li>
+<li><strong>Setting a pointer to <code>null</code></strong> after its usage to avoid dangling pointers</li>
+</ul>
+
+
+<p>It&rsquo;s important to note that either <code>delete</code> function is actually interpreted as <strong>delete the object stored in pointer (arg)</strong>, which is entirely different from deleting the pointer itself. It&rsquo;s also important to note that either <code>delete</code> function only works on objects allocated with <code>new</code>. We use <code>delete</code> for variables that take up one block of space (eg. int, double, subclasses) and <code>delete[]</code> for array-based variables (eg. string, int[]). The following code snippet shows an example of inaccessible memory:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>std::string *bar = new std::string;
+</span><span class='line'>*bar = "..";
+</span><span class='line'>std::cout &lt;&lt; *bar &lt;&lt; std::endl; 
+</span><span class='line'>bar = null;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the example above, the string <code>..</code> was initialized at the memory address stored in the pointer <code>bar</code>. After pointing <code>bar</code> to null (as stated in the second point in the guideline), there&rsquo;s nothing left that points to the memory storing the string containing <code>..</code>, making it impossible to deallocate and forced to remain in the RAM throughout the whole duration of the program. These situations are called <strong>Memory Leaks</strong>, and can be remedied by following the first guideline as stated earlier as seen below:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>std::string *bar = new std::string;
+</span><span class='line'>*bar = "..";
+</span><span class='line'>std::cout &lt;&lt; *bar &lt;&lt; std::endl; 
+</span><span class='line'>delete bar; // deletes the object pointed to by bar, not bar itself
+</span><span class='line'>bar = null</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Another type of problem presented by mishandling pointers is the <strong>Dangling Pointer</strong>, which happens when an pointer points to a memory address that, at the time of accessing, has not been allocated. It&rsquo;s important to note that not being allocated is not equivalent to pointing to null. The following code snippet shows an example of a dangling pointer:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>int *bar = new int(5);
+</span><span class='line'>delete bar;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Since the memory address stored in <code>bar</code> has been freed with <code>delete bar</code>, <code>bar</code> now points to a deallocated memory address. Dereferencing or assigning the address at this point may be unsafe and result in <strong>undefined behavior</strong>, so it&rsquo;s better to set <code>bar</code> to <code>null</code> to stay on the safer side of memory management.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>int *bar = new int(5);
+</span><span class='line'>delete bar;
+</span><span class='line'>bar = 0;
+</span><span class='line'>std::cout &lt;&lt; bar &lt;&lt; std::endl; // Output: 0x0 (null)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Beyond the band-aid fix of setting a pointer to null, however, it would be better to modify the code in a way that there would be no need to set the pointer to null to begin with.
+Most examples here are trivial and meant to showcase pointer syntax above anything else. In reality, pointers can be used in OOP and to allocate memory in more resource-hungry programs to maximise their performance.</p>
+
+<h2>References</h2>
+
+<p>A <strong>Reference</strong> holds another variable of the same declared type, and serves as its alias. Its behavior is relatable to how a person can (but may not) be referred to by multiple nicknames or aliases while maintaining one full name. It can be declared and must be defined using <code>data_type &amp;identifier</code>. Similarly with <code>*</code>, note that the <code>&amp;</code> used when declaring a reference is not the same as the referencing operator <code>&amp;</code> used in the earlier examples. Unlike pointers, a reference cannot be null or re-assigned after being defined.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>std::string foo = "..";
+</span><span class='line'>std::string& bar = foo;
+</span><span class='line'>
+</span><span class='line'>bool foobar = (foo==bar);
+</span><span class='line'>std::cout &lt;&lt; foobar &lt;&lt; std::endl; // output: 1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In a way, references work similarly to pointers with more limitations and are <code>const</code> in nature. The existence of references, however, is not fully redundant - operations involving references are generally safer than those involving pointers, and are usually used unless the situation demands functions exclusive to pointers (recall how pointers can be reassigned, while references cannot). References are also generally easier to use, as there&rsquo;s no need to keep track of dangling pointers or inaccessible memory. While I won&rsquo;t be going through the in-depth uses of references, I&rsquo;ve written one instance that showcases their functionality and definition well.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>void swap_val (int foo, int bar) {
+</span><span class='line'>    int qux = foo;
+</span><span class='line'>    foo = bar;
+</span><span class='line'>    bar = qux;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When the above function <code>swap_val (a, b)</code> is called in an external function, the parameters <code>foo</code> and <code>bar</code> are merely copies of the values stored in <code>a</code> and <code>b</code>. As a result, calling this function will not result in swapping the actual values of <code>a</code> and <code>b</code> outside the function. When this behaviour happens in a function, it&rsquo;s said that its parameters <strong>pass by value</strong>. In the alternative function below,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>void swap_ref (int &foo, int &bar) {
+</span><span class='line'>    int qux = foo;
+</span><span class='line'>    foo = bar;
+</span><span class='line'>    bar = qux;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notice that references are passed instead of actual <code>int</code> parameters. When <code>swap_ref (a, b)</code> is called, what&rsquo;s passed to the function are <em>references to a and b</em>, and not just copies of their values. When this behavior occurs, a function&rsquo;s parameters are said to <strong>pass by value</strong>. Now, when the function calls operations on references of <code>a</code> and <code>b</code>, they are actually called on the variables <code>a</code> and <code>b</code> passed as parameters as well. As a result,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>int foo = 10;
+</span><span class='line'>int bar = 20;
+</span><span class='line'>swap_val (foo, bar);
+</span><span class='line'>std::cout &lt;&lt; foo &lt;&lt; std::endl; // Output: 10
+</span><span class='line'>std::cout &lt;&lt; bar &lt;&lt; std::endl; // Output: 20
+</span><span class='line'>
+</span><span class='line'>swap_ref (foo, bar);
+</span><span class='line'>swap_val (foo, bar);
+</span><span class='line'>std::cout &lt;&lt; foo &lt;&lt; std::endl; // Output: 20
+</span><span class='line'>std::cout &lt;&lt; bar &lt;&lt; std::endl; // Output: 10  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>References are normally inaccessible in languages that maintain high level functionalities (including Java), making the language <strong>pass by value</strong> as a whole by default. What&rsquo;s good about the availability of access to references in C++ is the option to pass parameters either by value or by reference to functions, resulting in more versatile ways to code.</p>
+
+<h2>Summary</h2>
+
+<p>Here&rsquo;s a list of the terminologies used throughout the article:</p>
+
+<table>
+    <tr>
+        <td><strong>TERM</strong></td>
+        <td><strong>SAMPLE USAGE</strong></td>
+        <td><strong>DEFINITION</strong></td>
+    </tr>
+
+    <tr>
+        <td>Pointer</td>
+        <td><code>int *foo</code></td>
+        <td>A data type that stores a memory address</td>
+    </tr>
+
+    <tr>
+        <td>Reference (noun)</td>
+        <td><code>int &foo</code></td>
+        <td>A data type that serves as an alias to another variable</td>
+
+    </tr>
+
+
+
+    <tr>
+        <td>Dereference</td>
+        <td><code>*bar</code></td>
+        <td>To get the object stored in a memory address or pointer with the <code>*</code> operator</td>
+    </tr>
+
+    <tr>
+        <td>Memory Leak</td>
+        <td><code>n/a</code></td>
+        <td>Result of memory addresses that can no longer be accessed and deallocated</td>
+    </tr>
+
+    <tr>
+        <td>Dangling Pointers</td>
+        <td><code>n/a</code></td>
+        <td>Result of deallocating a memory address a pointer is pointing to</td>
+    </tr>
+
+    <tr>
+        <td>Undefined Behavior</td>
+        <td><code>n/a</code></td>
+        <td>Result of illogical operations (eg. dereferencing a dangling pointer)</td>
+    </tr>
+
+    <tr>
+        <td>Pass</td>
+        <td><code>foo (a, b)</code></td>
+        <td>Action taken on parameters used when calling a function</td>
+    </tr>
+
+    <tr>
+        <td>Pass by Value</td>
+        <td><code>void (int foo)</code></td>
+        <td>Behavior in which functions operate on copies or clones of passed parameters</td>
+    </tr>
+
+    <tr>
+        <td>Pass by Reference </td>
+        <td><code>void (int &foo)</code></td>
+        <td>Behavior in which functions operate on aliases leading to the passed parameters</td>
+    </tr>
+
+</table>
+
+
+<h2>Further Reading</h2>
+
+<p>There&rsquo;re a number of common applications for references and pointers that I did not cover in this entry - here&rsquo;s a small list of those:</p>
+
+<ul>
+<li><strong>Memory Management: Stacks and Heaps</strong>: In short, normal declared variables are allocated to the stack while variables called with <code>new</code> and pointers are allocated in the heap. Reading up on this will allow you to have a better understanding of what happens on a lower level beyond the the code and how memory is managed through code.</li>
+<li><strong>Nesting (de)referencing operators</strong>: It&rsquo;s possible to call data types such as <code>type **identifier</code> to create a pointer to a pointer, or to use combinations of <code>&amp;</code> and <code>*</code> to create variable types that may eventually come in handy. Understanding how nested operators work will also provide a stronger foundation in C++ OOP than what&rsquo;s covered in this article.</li>
+<li><strong>Pointers and Arrays</strong>: These two are closely related and reading up on them can explain the similarities in data types such as <code>char *</code> and <code>int *</code> when declaring an array or a pointer.</li>
+<li><strong>Parameters and Return Values</strong>: Pointers and References, like any other variable, can be used as parameters and return values when implementing functions. You will likely encounter terms such as <em>pass by value</em> and <em>pass by reference</em>, which were introduced briefly earlier in this guide.</li>
+<li><strong>Smart Pointers</strong>: More modern pointers that can be configured to or automatically delete pointers after a specified event. These, for the most part, get rid of the dangerous side of memory management that come with using regular pointers.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSX: Fixing Slow Wakes and Automatic Shutdowns]]></title>
+    <link href="http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns/"/>
+    <updated>2015-04-28T14:29:21+08:00</updated>
+    <id>http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns</id>
+    <content type="html"><![CDATA[<p>All these commands have been personally tested on my Macbook Pro running OSX Yosemite 10.10.3.</p>
+
+<p><strong>Slow Wakes</strong> are implemented by default in OSX to maximize the lifespan of a machine&rsquo;s battery, which to my knowledge is more difficult, if not impossible to replace in Apple&rsquo;s newer product lines. On the other hand, <strong>Automatic Shutdowns</strong> are a result of Apple complying with the European Energy Standards, as seen in the following text from their official documentation:</p>
+
+<blockquote><p>With the release of the OS X Mountain Lion v10.8.2 supplemental update 2.0, a new feature was introduced to enter safe sleep after four hours of the computer being connected to AC power. This is an effort to comply with the European Energy Standards (ErP Lot6). This will only occur if there is no wireless or Ethernet activity and no activity from external devices such as USB storage devices.</p></blockquote>
+
+<p>Depending on when and how you work, however, these features may get in the way of your productivity to the point where the benefits they bring to your machine&rsquo;s battery are negligible compared to its disadvantages. <!-- more -->
+If you&rsquo;re like me and use your machine daily for work or whatnot, you&rsquo;ve probably started seeing these features in a negative light. If you&rsquo;ve troubleshooted your system preferences to no avail, you&rsquo;ll most likely have better luck tweaking the <strong>Power Management Settings</strong> of your machine, which can be accessed through the Terminal with the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -g</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After typing the command, input the password you use to log in and out of your Macbook, and hit <code>return</code>. If everything checks out, your screen should show the actual configurations of your machine, as seen below.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Active Profiles:
+</span><span class='line'>Battery Power        -1
+</span><span class='line'>AC Power           -1*
+</span><span class='line'>Currently in use:
+</span><span class='line'>standbydelay         10800
+</span><span class='line'>standby              1
+</span><span class='line'>womp                 1
+</span><span class='line'>halfdim              1
+</span><span class='line'>hibernatefile        /var/vm/sleepimage
+</span><span class='line'>darkwakes            1
+</span><span class='line'>networkoversleep     0
+</span><span class='line'>disksleep            10
+</span><span class='line'>sleep                0 
+</span><span class='line'>autopoweroffdelay    172800
+</span><span class='line'>hibernatemode        3
+</span><span class='line'>autopoweroff         0
+</span><span class='line'>ttyskeepawake        1
+</span><span class='line'>displaysleep         10
+</span><span class='line'>acwake               0
+</span><span class='line'>lidwake              1
+</span><span class='line'>MacBook-Pro:~ Cami$ </span></code></pre></td></tr></table></div></figure>
+
+
+<p>What <code>pmset</code> shows, in a nutshell, are your configurations for standby, hibernation, sleep and power. Note that these numbers won&rsquo;t be accurate as I&rsquo;ve already configured them on my own; the actual settings, however, should be more or less identical. We&rsquo;ll be using these configurations primarily to address the problems brought upon by the features I&rsquo;ve mentioned in the beginning of this post.</p>
+
+<h2>Fixing Automatic Shutdowns</h2>
+
+<p>The automatic shutdown &lsquo;feature&rsquo; proved to be detrimental to me as I had to rearrange and reopen my windows daily (sometimes bidaily) and check for any lost data prior to putting my machine into sleep mode. I&rsquo;ve tried resetting the SMC and NVRAM to no avail, along with tweaking some settings in System Preferences that haven&rsquo;t been touched before the behaviour started. We&rsquo;ll be using <code>pmset</code> to solve configure the settings for this feature, as seen below.</p>
+
+<p>The <code>autopoweroff</code> line refers to whether your system automatically shuts down or enters the &lsquo;safe sleep mode&rsquo; after being in ordinary sleep mode for the number of seconds specified in <code>autopoweroffdelay</code>. Since Apple enabled this feature by default, the value in your terminal for <code>autopoweroff</code> will be <code>1</code>. To disable it, the value needs to be changed to <code>0</code> with the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -a autopoweroff 0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Despite using this command, however, I found that the auto-sleep behaviour still persisted on my Macbook. If you want to stay on the safe side, I recommend you tweak your configurations for the <code>autopoweroffdelay</code> setting as well.
+The default value for <code>autopoweroffdelay</code> is 14400, which is equivalent to 4 hours as stated in the official documentation. If you&rsquo;re not interested in having your machine shut down automatically in the middle of the day, you can tweak the time value for this setting by using the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -a autopoweroffdelay 172800</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I changed the delay from 14400 to 172800, which is equivalent to 2 days. You can change time value to whatever suits your working habits using the same command as many times as you&rsquo;d like. The two commands above should cover your issues concerning automatic shutdowns using <code>pmset</code>; if you still have problems, you may want to check your <strong>System Preferences</strong> for scheduled shutdowns.</p>
+
+<h2>Fixing Slow Wakes</h2>
+
+<p>The other common problem (or battery saving feature, depending on how you look at it) is the slow wake. This happens when your Macbook takes a while to boot up after opening the lid, and can be fixed by editing the configurations stored in <code>pmset</code> as well.</p>
+
+<p>When going into standby mode, your computer stores the contents in its RAM into the Hard Drive in order to save battery. Booting up from the hard drive, however, takes time (even for Solid State Drives or Flash-Based Storage) compared to doing so from RAM, which causes the slow boot-up. If you&rsquo;re fine with sacrificing battery life to get rid of this feature, you can turn it off with the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -a standby 0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I don&rsquo;t recommend this though, as leaving your Macbook unattended for long periods of time with this setting may cause the battery to drain faster and go through more cycles, resulting in lowering its lifespan. A more reasonable compromise would be setting up a time before standby mode kicks in, which can be set by typing the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -a standbydelay 43200</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This tells your computer to remain off standby mode for 12 hours after being put into sleep mode, which allows you to have fast wakes when you open your Macbook as soon as you wake up, assuming you stopped using it right before going to bed. Unlike the former command, however, this setting allows you to compromise your battery less while achieving similar results, depending on how you work. Like <code>autopoweroffdelay</code>, however, this delay time can be set to anything, so feel free to tweak the commands.</p>
+
+<hr />
+
+<p>All the commands mentioned in this post will remain after shutting off your machine, so there&rsquo;s no need to do the procedures after every boot-up. You can always confirm the settings by calling <code>sudo pmset -g</code> in Terminal. I&rsquo;ve covered most of what you need to know to fix the most noticeable sleep and wake issues implemented by default in OSX - if you want to mess with the other variables, you can read up on them <a href="http://en.wikipedia.org/wiki/Pmset">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello, World!]]></title>
+    <link href="http://diezcami.github.io/blog/2015/04/27/hello/"/>
+    <updated>2015-04-27T20:48:06+08:00</updated>
+    <id>http://diezcami.github.io/blog/2015/04/27/hello</id>
+    <content type="html"><![CDATA[<p>Hi, I&rsquo;m Cami! This is the first pass of my attempt at making a personal blog. I&rsquo;ve yet to learn how to work around the Octopress/Jekyll framework without looking up references often, but I&rsquo;m certain I&rsquo;ll find my way around them in due time.</p>
+
+<p>In addition to learning how to deploy a project with <code>git</code>, I&rsquo;m also hoping to improve my writing skills and programming practices as I contribute to this blog.</p>
+
+<p>I hope you enjoy your stay here!</p>
+]]></content>
+  </entry>
+  
+</feed>
