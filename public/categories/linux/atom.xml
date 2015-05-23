@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Linux | Camille Diez]]></title>
-  <link href="http://diezcami.github.io//categories/linux/atom.xml" rel="self"/>
-  <link href="http://diezcami.github.io//"/>
-  <updated>2015-05-23T15:16:28+08:00</updated>
-  <id>http://diezcami.github.io//</id>
+  <link href="http://diezcami.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://diezcami.github.io/blog/"/>
+  <updated>2015-05-23T15:18:20+08:00</updated>
+  <id>http://diezcami.github.io/blog/</id>
   <author>
     <name><![CDATA[Camille Diez]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Quick Guide to Aliasing Terminal Commands]]></title>
-    <link href="http://diezcami.github.io//2015/05/19/a-quick-guide-to-aliasing-terminal-commands/"/>
+    <link href="http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands/"/>
     <updated>2015-05-19T02:34:25+08:00</updated>
-    <id>http://diezcami.github.io//2015/05/19/a-quick-guide-to-aliasing-terminal-commands</id>
+    <id>http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands</id>
     <content type="html"><![CDATA[<p>This guide will probably only be useful to you if you find yourself using the <strong>Terminal</strong> a lot whether on Linux/OS X. Here, I&rsquo;ll be talking about aliases and how you could use them in your daily work to maximize your productivity and, to an extent, maintain your sanity while working with a mountain of commands.</p>
 
 <!-- more -->

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://diezcami.github.io//sitemap.xml
+Sitemap: http://diezcami.github.io/blog/sitemap.xml
