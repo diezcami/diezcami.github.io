@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Programming | Camille Diez]]></title>
-  <link href="http://diezcami.github.io/blog/categories/programming/atom.xml" rel="self"/>
-  <link href="http://diezcami.github.io/blog/"/>
-  <updated>2015-05-23T14:55:31+08:00</updated>
-  <id>http://diezcami.github.io/blog/</id>
+  <link href="http://diezcami.github.io//categories/programming/atom.xml" rel="self"/>
+  <link href="http://diezcami.github.io//"/>
+  <updated>2015-05-23T15:16:28+08:00</updated>
+  <id>http://diezcami.github.io//</id>
   <author>
     <name><![CDATA[Camille Diez]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Why Learning How to Program Is Hard]]></title>
-    <link href="http://diezcami.github.io/blog/2015/05/11/why-programming-is-hard/"/>
+    <link href="http://diezcami.github.io//2015/05/11/why-programming-is-hard/"/>
     <updated>2015-05-11T15:14:57+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/05/11/why-programming-is-hard</id>
+    <id>http://diezcami.github.io//2015/05/11/why-programming-is-hard</id>
     <content type="html"><![CDATA[<p>I believe learning how to program is manageable in this day and age, with just about every answer being one google search away - there&rsquo;s a multitude of free books, videos and even courses available online for any topic under programming, and even a website literally created to have people solve any kind of programming inquiry or problem you&rsquo;ve had. Despite this, it&rsquo;s not uncommon to hear people say how programming is difficult, and (for the extremes) how anyone who says otherwise is a liar.</p>
 
 <p>Don&rsquo;t get me wrong; while I do think it&rsquo;s manageable, I still believe learning how to program can easily be made difficult due to a certain trend of circumstances - take it from someone who got a C in an introductory course to programming.</p>
@@ -49,9 +49,9 @@ When I first typed this, I absolutely could not fathom what was going on, and co
   
   <entry>
     <title type="html"><![CDATA[C++ Pointers and References: An Overview]]></title>
-    <link href="http://diezcami.github.io/blog/2015/05/08/c-plus-plus-pointers-and-references-an-overview/"/>
+    <link href="http://diezcami.github.io//2015/05/08/c-plus-plus-pointers-and-references-an-overview/"/>
     <updated>2015-05-08T11:33:15+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/05/08/c-plus-plus-pointers-and-references-an-overview</id>
+    <id>http://diezcami.github.io//2015/05/08/c-plus-plus-pointers-and-references-an-overview</id>
     <content type="html"><![CDATA[<p>References and pointers are usually, in one way or another, implemented in every programming language; higher level languages, however, most likely do not provide explicit access to them. As a result, they often come up implicitly in the form of garbage collection and simpler OOP conventions. On the other hand, languages that have more freedom at lower levels such as C/C++ allow users to explicitly use pointers and references to manually control several aspects of a program including, but not limited to memory management/allocation, OOP and ease of access.</p>
 
 <p>This guide is split into two parts - here, I&rsquo;ll be going through a basic overview on pointers and references understandable to anyone with knowledge on basic programming in any language and minor C++ syntax (mainly std, cout and endl).</p>

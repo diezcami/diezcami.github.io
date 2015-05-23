@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Camille Diez]]></title>
-  <link href="http://diezcami.github.io/blog/atom.xml" rel="self"/>
-  <link href="http://diezcami.github.io/blog/"/>
-  <updated>2015-05-23T14:55:31+08:00</updated>
-  <id>http://diezcami.github.io/blog/</id>
+  <link href="http://diezcami.github.io//atom.xml" rel="self"/>
+  <link href="http://diezcami.github.io//"/>
+  <updated>2015-05-23T15:16:28+08:00</updated>
+  <id>http://diezcami.github.io//</id>
   <author>
     <name><![CDATA[Camille Diez]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Quick Guide to Aliasing Terminal Commands]]></title>
-    <link href="http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands/"/>
+    <link href="http://diezcami.github.io//2015/05/19/a-quick-guide-to-aliasing-terminal-commands/"/>
     <updated>2015-05-19T02:34:25+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands</id>
+    <id>http://diezcami.github.io//2015/05/19/a-quick-guide-to-aliasing-terminal-commands</id>
     <content type="html"><![CDATA[<p>This guide will probably only be useful to you if you find yourself using the <strong>Terminal</strong> a lot whether on Linux/OS X. Here, I&rsquo;ll be talking about aliases and how you could use them in your daily work to maximize your productivity and, to an extent, maintain your sanity while working with a mountain of commands.</p>
 
 <!-- more -->
@@ -87,9 +87,9 @@
   
   <entry>
     <title type="html"><![CDATA[Why Learning How to Program Is Hard]]></title>
-    <link href="http://diezcami.github.io/blog/2015/05/11/why-programming-is-hard/"/>
+    <link href="http://diezcami.github.io//2015/05/11/why-programming-is-hard/"/>
     <updated>2015-05-11T15:14:57+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/05/11/why-programming-is-hard</id>
+    <id>http://diezcami.github.io//2015/05/11/why-programming-is-hard</id>
     <content type="html"><![CDATA[<p>I believe learning how to program is manageable in this day and age, with just about every answer being one google search away - there&rsquo;s a multitude of free books, videos and even courses available online for any topic under programming, and even a website literally created to have people solve any kind of programming inquiry or problem you&rsquo;ve had. Despite this, it&rsquo;s not uncommon to hear people say how programming is difficult, and (for the extremes) how anyone who says otherwise is a liar.</p>
 
 <p>Don&rsquo;t get me wrong; while I do think it&rsquo;s manageable, I still believe learning how to program can easily be made difficult due to a certain trend of circumstances - take it from someone who got a C in an introductory course to programming.</p>
@@ -127,9 +127,9 @@
   
   <entry>
     <title type="html"><![CDATA[C++ Pointers and References: An Overview]]></title>
-    <link href="http://diezcami.github.io/blog/2015/05/08/c-plus-plus-pointers-and-references-an-overview/"/>
+    <link href="http://diezcami.github.io//2015/05/08/c-plus-plus-pointers-and-references-an-overview/"/>
     <updated>2015-05-08T11:33:15+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/05/08/c-plus-plus-pointers-and-references-an-overview</id>
+    <id>http://diezcami.github.io//2015/05/08/c-plus-plus-pointers-and-references-an-overview</id>
     <content type="html"><![CDATA[<p>References and pointers are usually, in one way or another, implemented in every programming language; higher level languages, however, most likely do not provide explicit access to them. As a result, they often come up implicitly in the form of garbage collection and simpler OOP conventions. On the other hand, languages that have more freedom at lower levels such as C/C++ allow users to explicitly use pointers and references to manually control several aspects of a program including, but not limited to memory management/allocation, OOP and ease of access.</p>
 
 <p>This guide is split into two parts - here, I&rsquo;ll be going through a basic overview on pointers and references understandable to anyone with knowledge on basic programming in any language and minor C++ syntax (mainly std, cout and endl).</p>
@@ -420,9 +420,9 @@ Most examples here are trivial and meant to showcase pointer syntax above anythi
   
   <entry>
     <title type="html"><![CDATA[OSX: Fixing Slow Wakes and Automatic Shutdowns]]></title>
-    <link href="http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns/"/>
+    <link href="http://diezcami.github.io//2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns/"/>
     <updated>2015-04-28T14:29:21+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns</id>
+    <id>http://diezcami.github.io//2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns</id>
     <content type="html"><![CDATA[<p>All these commands have been personally tested on my Macbook Pro running OSX Yosemite 10.10.3.</p>
 
 <p><strong>Slow Wakes</strong> are implemented by default in OSX to maximize the lifespan of a machine&rsquo;s battery, which to my knowledge is more difficult, if not impossible to replace in Apple&rsquo;s newer product lines. On the other hand, <strong>Automatic Shutdowns</strong> are a result of Apple complying with the European Energy Standards, as seen in the following text from their official documentation:</p>
@@ -529,9 +529,9 @@ The default value for <code>autopoweroffdelay</code> is 14400, which is equivale
   
   <entry>
     <title type="html"><![CDATA[Hello, World!]]></title>
-    <link href="http://diezcami.github.io/blog/2015/04/27/hello/"/>
+    <link href="http://diezcami.github.io//2015/04/27/hello/"/>
     <updated>2015-04-27T20:48:06+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/04/27/hello</id>
+    <id>http://diezcami.github.io//2015/04/27/hello</id>
     <content type="html"><![CDATA[<p>Hi, I&rsquo;m Cami! This is the first pass of my attempt at making a personal blog. I&rsquo;ve yet to learn how to work around the Octopress/Jekyll framework without looking up references often, but I&rsquo;m certain I&rsquo;ll find my way around them in due time.</p>
 
 <p>In addition to learning how to deploy a project with <code>git</code>, I&rsquo;m also hoping to improve my writing skills and programming practices as I contribute to this blog.</p>

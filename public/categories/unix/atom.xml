@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Unix | Camille Diez]]></title>
-  <link href="http://diezcami.github.io/blog/categories/unix/atom.xml" rel="self"/>
-  <link href="http://diezcami.github.io/blog/"/>
-  <updated>2015-05-23T14:55:31+08:00</updated>
-  <id>http://diezcami.github.io/blog/</id>
+  <link href="http://diezcami.github.io//categories/unix/atom.xml" rel="self"/>
+  <link href="http://diezcami.github.io//"/>
+  <updated>2015-05-23T15:16:28+08:00</updated>
+  <id>http://diezcami.github.io//</id>
   <author>
     <name><![CDATA[Camille Diez]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Quick Guide to Aliasing Terminal Commands]]></title>
-    <link href="http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands/"/>
+    <link href="http://diezcami.github.io//2015/05/19/a-quick-guide-to-aliasing-terminal-commands/"/>
     <updated>2015-05-19T02:34:25+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands</id>
+    <id>http://diezcami.github.io//2015/05/19/a-quick-guide-to-aliasing-terminal-commands</id>
     <content type="html"><![CDATA[<p>This guide will probably only be useful to you if you find yourself using the <strong>Terminal</strong> a lot whether on Linux/OS X. Here, I&rsquo;ll be talking about aliases and how you could use them in your daily work to maximize your productivity and, to an extent, maintain your sanity while working with a mountain of commands.</p>
 
 <!-- more -->
@@ -87,9 +87,9 @@ When you're done, save the file using</code>Ctrl+X<code>,</code>Y<code>, and</co
   
   <entry>
     <title type="html"><![CDATA[OSX: Fixing Slow Wakes and Automatic Shutdowns]]></title>
-    <link href="http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns/"/>
+    <link href="http://diezcami.github.io//2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns/"/>
     <updated>2015-04-28T14:29:21+08:00</updated>
-    <id>http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns</id>
+    <id>http://diezcami.github.io//2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns</id>
     <content type="html"><![CDATA[<p>All these commands have been personally tested on my Macbook Pro running OSX Yosemite 10.10.3.</p>
 
 <p><strong>Slow Wakes</strong> are implemented by default in OSX to maximize the lifespan of a machine&rsquo;s battery, which to my knowledge is more difficult, if not impossible to replace in Apple&rsquo;s newer product lines. On the other hand, <strong>Automatic Shutdowns</strong> are a result of Apple complying with the European Energy Standards, as seen in the following text from their official documentation:</p>

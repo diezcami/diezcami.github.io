@@ -6,7 +6,7 @@ require "stringex"
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "git@github.com:diezcami/blog.git"
 ssh_port       = "22"
-document_root  = "~/website.com/"
+document_root  = "~/website.com/blog"
 rsync_delete   = false
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "push"
