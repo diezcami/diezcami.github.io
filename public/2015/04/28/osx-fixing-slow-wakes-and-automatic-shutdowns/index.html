@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>OSX: Fixing Slow Wakes and Automatic Shutdowns - Camille Diez</title>
+  <meta name="author" content="Camille Diez">
+
+  
+  <meta name="description" content="All these commands have been personally tested on my Macbook Pro running OSX Yosemite 10.10.3. Slow Wakes are implemented by default in OSX to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Camille Diez" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+<!--- MathJax Configuration -->
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/blog">Camille Diez</a></h1>
+  
+    <h2>Beef Bowls and Iced Tea</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  
+</ul>
+  
+  
+  
+  
+  
+<ul class="subscribe">
+  <li><a href="https://github.com/diezcami" rel="subscribe-github" title="@diezcami on GitHub" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 50,0 C 22.385714,0 0,22.385714 0,50 0,77.614286 22.385714,100 50,100 77.614286,100 100,77.614286 100,50 100,22.385714 77.614286,0 50,0 z m 29.692858,79.692858 c -3.859184,3.859182 -8.351022,6.887754 -13.35,9.00306 -1.27041,0.536736 -2.560204,1.009184 -3.867348,1.415306 v -7.493878 c 0,-3.938774 -1.35102,-6.835714 -4.053062,-8.690816 1.692858,-0.163264 3.24694,-0.390816 4.663266,-0.683672 1.416326,-0.292858 2.913266,-0.716328 4.491838,-1.27041 1.57857,-0.55408 2.994896,-1.213264 4.247958,-1.97755 1.253062,-0.765306 2.458164,-1.758164 3.613266,-2.978572 1.155102,-1.220408 2.12449,-2.604082 2.905102,-4.15 0.780612,-1.545918 1.4,-3.40204 1.855102,-5.566326 0.455102,-2.164286 0.683674,-4.54898 0.683674,-7.153062 0,-5.045918 -1.643878,-9.341836 -4.931634,-12.890816 C 77.44796,33.35 77.285714,29.10204 75.463266,24.512244 l -1.22143,-0.145918 c -0.845918,-0.09796 -2.368366,0.260204 -4.565306,1.07449 -2.196938,0.814286 -4.663264,2.14796 -7.396938,4.004082 -3.87449,-1.07449 -7.893878,-1.611224 -12.061224,-1.611224 -4.19898,0 -8.203062,0.536734 -12.012246,1.611224 -1.72449,-1.17245 -3.361224,-2.139796 -4.907142,-2.905102 C 31.753062,25.77449 30.516326,25.254082 29.587756,24.97653 28.660204,24.7 27.79796,24.528572 27,24.463266 c -0.79796,-0.0653 -1.310204,-0.08062 -1.537756,-0.04898 -0.22755,0.03164 -0.390816,0.0653 -0.487754,0.09796 -1.82347,4.62245 -1.985714,8.87143 -0.487756,12.743878 -3.287754,3.54796 -4.931632,7.844898 -4.931632,12.890816 0,2.604082 0.227552,4.988776 0.683674,7.153062 0.456122,2.164286 1.07449,4.020408 1.855102,5.566326 0.780612,1.545918 1.75,2.929592 2.905102,4.15 1.155102,1.220408 2.360204,2.213266 3.613264,2.978572 1.253062,0.766326 2.669388,1.42449 4.24796,1.97755 1.578572,0.554082 3.07551,0.976532 4.491836,1.27041 1.416328,0.292856 2.970408,0.521428 4.663266,0.683672 -2.669388,1.82347 -4.004082,4.720408 -4.004082,8.690816 v 7.639796 C 36.536734,89.818368 35.083674,89.3 33.656122,88.695918 c -4.99898,-2.115306 -9.490816,-5.143878 -13.35,-9.00306 -3.859184,-3.859184 -6.887754,-8.351022 -9.00306,-13.35 C 9.1163263,61.171428 8.0071428,55.67347 8.0071428,50 c 0,-5.67347 1.1091835,-11.171428 3.2969392,-16.342858 2.115306,-4.998978 5.143878,-9.490816 9.00306,-13.35 3.859184,-3.859182 8.351022,-6.887754 13.35,-9.00306 C 38.828572,9.1163266 44.32653,8.0071428 50,8.0071428 c 5.67347,0 11.171428,1.1091838 16.342858,3.2969392 5,2.115306 9.490816,5.143878 13.35,9.00306 3.859182,3.859184 6.887754,8.351022 9.00306,13.35 2.186736,5.17245 3.295918,10.67041 3.295918,16.342858 0,5.672448 -1.109182,11.171428 -3.296938,16.342858 -2.115306,4.998978 -5.143878,9.490816 -9.00204,13.35 l 0,0 z"></path></svg></a></li>
+</ul>
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      <form action="https://www.google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="sitesearch" value="diezcami.github.io/blog" />
+    
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">OSX: Fixing Slow Wakes and Automatic Shutdowns</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-04-28T14:29:21+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:29 pm</span></time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>All these commands have been personally tested on my Macbook Pro running OSX Yosemite 10.10.3.</p>
+
+<p><strong>Slow Wakes</strong> are implemented by default in OSX to maximize the lifespan of a machine&rsquo;s battery, which to my knowledge is more difficult, if not impossible to replace in Apple&rsquo;s newer product lines. On the other hand, <strong>Automatic Shutdowns</strong> are a result of Apple complying with the European Energy Standards, as seen in the following text from their official documentation:</p>
+
+<blockquote><p>With the release of the OS X Mountain Lion v10.8.2 supplemental update 2.0, a new feature was introduced to enter safe sleep after four hours of the computer being connected to AC power. This is an effort to comply with the European Energy Standards (ErP Lot6). This will only occur if there is no wireless or Ethernet activity and no activity from external devices such as USB storage devices.</p></blockquote>
+
+<p>Depending on when and how you work, however, these features may get in the way of your productivity to the point where the benefits they bring to your machine&rsquo;s battery are negligible compared to its disadvantages. <!-- more -->
+If you&rsquo;re like me and use your machine daily for work or whatnot, you&rsquo;ve probably started seeing these features in a negative light. If you&rsquo;ve troubleshooted your system preferences to no avail, you&rsquo;ll most likely have better luck tweaking the <strong>Power Management Settings</strong> of your machine, which can be accessed through the Terminal with the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -g</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After typing the command, input the password you use to log in and out of your Macbook, and hit <code>return</code>. If everything checks out, your screen should show the actual configurations of your machine, as seen below.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Active Profiles:
+</span><span class='line'>Battery Power        -1
+</span><span class='line'>AC Power           -1*
+</span><span class='line'>Currently in use:
+</span><span class='line'>standbydelay         10800
+</span><span class='line'>standby              1
+</span><span class='line'>womp                 1
+</span><span class='line'>halfdim              1
+</span><span class='line'>hibernatefile        /var/vm/sleepimage
+</span><span class='line'>darkwakes            1
+</span><span class='line'>networkoversleep     0
+</span><span class='line'>disksleep            10
+</span><span class='line'>sleep                0 
+</span><span class='line'>autopoweroffdelay    172800
+</span><span class='line'>hibernatemode        3
+</span><span class='line'>autopoweroff         0
+</span><span class='line'>ttyskeepawake        1
+</span><span class='line'>displaysleep         10
+</span><span class='line'>acwake               0
+</span><span class='line'>lidwake              1
+</span><span class='line'>MacBook-Pro:~ Cami$ </span></code></pre></td></tr></table></div></figure>
+
+
+<p>What <code>pmset</code> shows, in a nutshell, are your configurations for standby, hibernation, sleep and power. Note that these numbers won&rsquo;t be accurate as I&rsquo;ve already configured them on my own; the actual settings, however, should be more or less identical. We&rsquo;ll be using these configurations primarily to address the problems brought upon by the features I&rsquo;ve mentioned in the beginning of this post.</p>
+
+<h2>Fixing Automatic Shutdowns</h2>
+
+<p>The automatic shutdown &lsquo;feature&rsquo; proved to be detrimental to me as I had to rearrange and reopen my windows daily (sometimes bidaily) and check for any lost data prior to putting my machine into sleep mode. I&rsquo;ve tried resetting the SMC and NVRAM to no avail, along with tweaking some settings in System Preferences that haven&rsquo;t been touched before the behaviour started. We&rsquo;ll be using <code>pmset</code> to solve configure the settings for this feature, as seen below.</p>
+
+<p>The <code>autopoweroff</code> line refers to whether your system automatically shuts down or enters the &lsquo;safe sleep mode&rsquo; after being in ordinary sleep mode for the number of seconds specified in <code>autopoweroffdelay</code>. Since Apple enabled this feature by default, the value in your terminal for <code>autopoweroff</code> will be <code>1</code>. To disable it, the value needs to be changed to <code>0</code> with the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -a autopoweroff 0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Despite using this command, however, I found that the auto-sleep behaviour still persisted on my Macbook. If you want to stay on the safe side, I recommend you tweak your configurations for the <code>autopoweroffdelay</code> setting as well.
+The default value for <code>autopoweroffdelay</code> is 14400, which is equivalent to 4 hours as stated in the official documentation. If you&rsquo;re not interested in having your machine shut down automatically in the middle of the day, you can tweak the time value for this setting by using the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -a autopoweroffdelay 172800</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I changed the delay from 14400 to 172800, which is equivalent to 2 days. You can change time value to whatever suits your working habits using the same command as many times as you&rsquo;d like. The two commands above should cover your issues concerning automatic shutdowns using <code>pmset</code>; if you still have problems, you may want to check your <strong>System Preferences</strong> for scheduled shutdowns.</p>
+
+<h2>Fixing Slow Wakes</h2>
+
+<p>The other common problem (or battery saving feature, depending on how you look at it) is the slow wake. This happens when your Macbook takes a while to boot up after opening the lid, and can be fixed by editing the configurations stored in <code>pmset</code> as well.</p>
+
+<p>When going into standby mode, your computer stores the contents in its RAM into the Hard Drive in order to save battery. Booting up from the hard drive, however, takes time (even for Solid State Drives or Flash-Based Storage) compared to doing so from RAM, which causes the slow boot-up. If you&rsquo;re fine with sacrificing battery life to get rid of this feature, you can turn it off with the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -a standby 0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I don&rsquo;t recommend this though, as leaving your Macbook unattended for long periods of time with this setting may cause the battery to drain faster and go through more cycles, resulting in lowering its lifespan. A more reasonable compromise would be setting up a time before standby mode kicks in, which can be set by typing the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pmset -a standbydelay 43200</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This tells your computer to remain off standby mode for 12 hours after being put into sleep mode, which allows you to have fast wakes when you open your Macbook as soon as you wake up, assuming you stopped using it right before going to bed. Unlike the former command, however, this setting allows you to compromise your battery less while achieving similar results, depending on how you work. Like <code>autopoweroffdelay</code>, however, this delay time can be set to anything, so feel free to tweak the commands.</p>
+
+<hr />
+
+<p>All the commands mentioned in this post will remain after shutting off your machine, so there&rsquo;s no need to do the procedures after every boot-up. You can always confirm the settings by calling <code>sudo pmset -g</code> in Terminal. I&rsquo;ve covered most of what you need to know to fix the most noticeable sleep and wake issues implemented by default in OSX - if you want to mess with the other variables, you can read up on them <a href="http://en.wikipedia.org/wiki/Pmset">here</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    Camille Diez
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-04-28T14:29:21+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:29 pm</span></time>
+      
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/osx/'>osx</a>, <a class='category' href='/categories/unix/'>unix</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2015/04/27/hello/" title="Previous Post: Hello, World!">&laquo; Hello, World!</a>
+      
+      
+        <a class="basic-alignment right" href="/2015/05/08/c-plus-plus-pointers-and-references-an-overview/" title="Next Post: C++ Pointers and References: An Overview">C++ Pointers and References: An Overview &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+
+</div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 Camille Diez 
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'diezcami';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns/';
+        var disqus_url = 'http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

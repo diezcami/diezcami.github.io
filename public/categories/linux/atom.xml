@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | Camille Diez]]></title>
+  <link href="http://diezcami.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://diezcami.github.io/blog/"/>
+  <updated>2015-05-23T14:38:35+08:00</updated>
+  <id>http://diezcami.github.io/blog/</id>
+  <author>
+    <name><![CDATA[Camille Diez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Quick Guide to Aliasing Terminal Commands]]></title>
+    <link href="http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands/"/>
+    <updated>2015-05-19T02:34:25+08:00</updated>
+    <id>http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands</id>
+    <content type="html"><![CDATA[<p>This guide will probably only be useful to you if you find yourself using the <strong>Terminal</strong> a lot whether on Linux/OS X. Here, I&rsquo;ll be talking about aliases and how you could use them in your daily work to maximize your productivity and, to an extent, maintain your sanity while working with a mountain of commands.</p>
+
+<!-- more -->
+
+
+<h2>What is Aliasing?</h2>
+
+<p>Aliasing a command is rather self explanatory - it&rsquo;s the act of defining a nickname or alias to a certain set of commands via the Terminal. For instance, take a look at the following command I&rsquo;ve been using frequently these past few days:
+<code>
+g++ -std=c++11 *.cpp -o output
+</code>
+As someone who started compiling C++ with <code>make</code> and only recently moved on to <code>g++</code> to handle multiple files, the additional <code>std=c++11</code> parameter was simply too tedious for me to type every time I wanted to compile a project on a new Terminal window. Call me lazy, but I&rsquo;ve been spoiled with the likes of <code>javac</code>, <code>ruby</code> and <code>python</code> for a couple of years now, and would like to have a similarly short compile command for C++. Luckily, a Terminal command actually exists to cure my predicament:
+<code>
+alias g++11="g++ -std=c++11"
+</code>
+The <code>alias</code> command is pretty straightforward - it aliases the text <code>g++ -std=c++11</code> into an alias <code>g++11</code>. From now on, as long as I remain in the same Terminal window, I can compile files in C++ with the following command:
+<code>
+g++11 *.cpp -o output
+</code>
+It&rsquo;s important to know that these <code>alias</code> commands will only remain in effect while the terminal windows they&rsquo;ve been typed in remain open. This probably wouldn&rsquo;t bother you if you don&rsquo;t plan on using the defined aliases beyond the timeline of a short project - if you find yourself needing to use multiple commands on a daily basis, however, you&rsquo;ll be glad to know there&rsquo;s a way to permanently retain these aliases.</p>
+
+<h2>For Linux</h2>
+
+<p>To make aliases permanent in Linux or any of its distros, just append the <code>alias</code> commands to the end of your <code>.bashrc</code> file. To do this, open a Terminal window, type <code>nano ~/.bashrc</code> and append your <code>alias</code> commands to the end of the file. You can add multiple aliases, though you&rsquo;d probably want to leave comments for each of them to avoid getting them mixed up.
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~/.bashrc&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;This is a comment, by the way. You can use it to label your aliases.&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;&hellip;&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;This alias is for compiling C++ files.&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;alias g++11=&ldquo;g++ -std=c++11&rdquo;
+</span><span class='line'>&lt;code&gt;``
+</span><span class='line'>When you're done, save the file using&lt;/code&gt;Ctrl+X&lt;code&gt;,&lt;/code&gt;Y&lt;code&gt;, and&lt;/code&gt;Enter&lt;code&gt;. Restart your Terminal or your machine, and you'll find that&lt;/code&gt;g++11&lt;code&gt;or whatever aliases you've declared are now permanently recognized by the system. To remove an alias, open the&lt;/code&gt;.bashrc` file again and delete any alias entries you no longer want to keep.&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h2&gt;For OS X&lt;/h2&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;The procedure retain aliases in OS X is similar to that of Linux; however, the &lt;code&gt;alias&lt;/code&gt; commands need to be entered in the &lt;code&gt;.bash_profile&lt;/code&gt; file instead &lt;code&gt;.bashrc&lt;/code&gt;. To do this, open terminal and type &lt;code&gt;nano ~/.bash_profile&lt;/code&gt; and append your &lt;code&gt;alias&lt;/code&gt; commands to the end of the file. Like Linux, you can add comments as well as multiple aliases to the &lt;code&gt;.bash_profile&lt;/code&gt; file.</span></code></pre></td></tr></table></div></figure>
+~/.bash_profile
+&hellip;</p>
+
+<h1>The process is exactly the same!</h1>
+
+<p>alias g++11=&ldquo;g++ -std=c++11&rdquo;
+<code>``
+When you're done, save the file using</code>Ctrl+X<code>,</code>Y<code>, and</code>Return`. Afterwards, restart your Terminal or machine, and you&rsquo;re done! The removal process is also the same as that of Linux. As a final note, be careful not to alias your commands with the names of existing commands.</p>
+
+<p>Thanks for reading my guide!</p>
+]]></content>
+  </entry>
+  
+</feed>

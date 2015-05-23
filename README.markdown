@@ -1,0 +1,1 @@
+This repo includes the source code of my personal blog powered by Octopress.
