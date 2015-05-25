@@ -1,2 +1,2 @@
-#Personal Blog
-This repository hosts and holds the source code of my personal blog, located at http://diezcami.github.io/blog.
+#Old Source
+This branch contains the source code of my block before I migrated from Octopress to Jekyll.
