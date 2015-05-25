@@ -4,12 +4,12 @@
         min-height: 450px;
         background-image: url('../images/header.png');
         background-size: cover;
-        background-position: center -170px;
+        background-position: center -150px;
         background-attachment: fixed;
 
         @include media-query($on-palm) {
             min-height: 250px;
-            background-position: center -250px;
+            background-position: center -70px;
         }
     }
 

@@ -166,12 +166,12 @@ table {
   min-height: 450px;
   background-image: url("../images/header.png");
   background-size: cover;
-  background-position: center -170px;
+  background-position: center -150px;
   background-attachment: fixed; }
   @media screen and (max-width: 700px) {
     .site-header {
       min-height: 250px;
-      background-position: center -250px; } }
+      background-position: center -70px; } }
 
 .site-header a, a h1:hover {
   color: #FFF; }
