@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>C++ Pointers and References: An Overview</title>
+  <meta name="description" content="References and pointers are usually, in one way or another, implemented in every programming language; higher level languages, however, most likely do not pr...">
+
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <link rel="canonical" href="http://diezcami.github.io/blog/programming/c++/2015/05/08/c-plus-plus-pointers-and-references-an-overview.html">
+  <link rel="alternate" type="application/rss+xml" title="Camille Diez" href="http://diezcami.github.io/blog/feed.xml" />
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+</head>
+
+
+  <body>
+
+    <div class="site-header">
+
+    <nav class="site-nav">
+        
+          
+          <a class="page-link" href="/blog/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          <a class ="page-link" href="http://diezcami.github.io" target="_blank">
+          Portfolio
+          </a>
+
+          <a class ="page-link" href="https://github.com/diezcami" target="_blank">
+          Github
+          </a>
+    </nav>
+
+    <h1>
+     <span>
+      <a class="site-title" href="/blog/">Camille Diez</a>
+     </span>
+    </h1>
+
+
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+     <h1 class="post-title">C++ Pointers and References: An Overview</h1>
+     <p class="post-meta">Posted on May 8, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p>References and pointers are usually, in one way or another, implemented in every programming language; higher level languages, however, most likely do not provide explicit access to them. As a result, they often come up implicitly in the form of garbage collection and simpler OOP conventions. On the other hand, languages that have more freedom at lower levels such as C/C++ allow users to explicitly use pointers and references to manually control several aspects of a program including, but not limited to memory management/allocation, OOP and ease of access. </p>
+
+<p>This guide is split into two parts - here, I&#39;ll be going through a basic overview on pointers and references understandable to anyone with knowledge on basic programming in any language and minor C++ syntax (mainly std, cout and endl).</p>
+
+<h2>Pointers</h2>
+
+<p>Every declared variable in a program, whether primitive or not, is stored in memory and has its own memory address in the form of a hexadecimal number (0x). These variables are normally accessed by identifiers they&#39;ve been declared with, paying no attention to its location in memory. To access the memory address of a variable in C++, we use the referencing operator <code>&amp;</code>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">std::string foo = &quot;foo&quot;;
+std::cout &lt;&lt; &amp;foo &lt;&lt; std::endl; // output: memory address of foo
+</code></pre></div>
+<p>A <strong>Pointer</strong> is a variable that holds a memory address. Its behavior is relatable to how entries in a table of contents contain page numbers or addresses that lead to actual content. It can be declared with or without being defined using <code>data_type *identifier</code>. To get the variable stored in a pointer, we use the dereferencing operator <code>*</code>. Note that the <code>*</code> being used as an operator and as part of a pointer&#39;s declaration are independent of each other.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">int num = 10;
+int *foo;
+int bar*; 
+std::cout &lt;&lt; foo &lt;&lt; std::endl; // output: 0x0 (null memory address)
+
+foo = &amp;num; 
+std::cout &lt;&lt; foo &lt;&lt; std::endl; // output: memory address of num
+std::cout &lt;&lt; *foo &lt;&lt; std::endl; //output: 10
+</code></pre></div>
+<p>Pointers are not limited to being assigned by memory addresses derived from the <code>&amp;</code> operator - they can also be assigned with the memory addresses stored in other pointers. If a pointer is assigned to another pointer, any changes to the variable stored in the common memory address will reflect on the <code>*</code> operation of either pointer. This behavior is reminiscent of how objects are handled handled in Java; </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">std::string qux = &quot;Tempura&quot;;
+std::string *foo, *bar;
+
+foo = &amp;qux;
+bar = foo;
+std::cout &lt;&lt; *foo &lt;&lt; std::endl; // output: Tempura
+std::cout &lt;&lt; *bar &lt;&lt; std:: endl; // output: Tempura
+
+qux = &quot;Tonkatsu&quot;;
+std::cout &lt;&lt; *foo &lt;&lt; std::endl; // output: Tonkatsu
+std::cout &lt;&lt; *bar &lt;&lt; std:: endl; // output: Tonkatsu
+</code></pre></div>
+<p>The deferencing operator <code>*</code> can also be used at the left hand side of operations to replace the values stored in a pointer or memory address. The referencing operator <code>&amp;</code>, however, cannot as it would not make sense to reallocate where a variable would be stored in memory. The following is a continuation of the code snippet above:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">// Recall that foo = &amp;qux
+*foo = &quot;Gyudon&quot;;
+std::cout &lt;&lt; qux &lt;&lt; std::endl; // output: Gyudon
+</code></pre></div>
+<h2>Pointer Practices</h2>
+
+<p>When using pointers regardless of how simple its applications are, it&#39;s paramount to take caution in remembering where a pointer comes from and goes towards during assignments. Carelessness here will lead to dangling pointers and memory leaks, which can be detrimental to your program&#39;s performance at best, and your whole computer&#39;s at worst. As good practice, the two main points to remember when using pointers are the following:</p>
+
+<ul>
+<li><strong>Deallocating memory</strong> used by an object a pointer points to using <code>delete pointer_to_obj</code> or <code>delete[] pointer_to_obj</code> after its usage to avoid memory leaks</li>
+<li><strong>Setting a pointer to <code>null</code></strong> after its usage to avoid dangling pointers</li>
+</ul>
+
+<p>It&#39;s important to note that either <code>delete</code> function is actually interpreted as <strong>delete the object stored in pointer (arg)</strong>, which is entirely different from deleting the pointer itself. It&#39;s also important to note that either <code>delete</code> function only works on objects allocated with <code>new</code>. We use <code>delete</code> for variables that take up one block of space (eg. int, double, subclasses) and <code>delete[]</code> for array-based variables (eg. string, int[]). The following code snippet shows an example of inaccessible memory:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">std::string *bar = new std::string;
+*bar = &quot;..&quot;;
+std::cout &lt;&lt; *bar &lt;&lt; std::endl; 
+bar = null;
+</code></pre></div>
+<p>In the example above, the string <code>..</code> was initialized at the memory address stored in the pointer <code>bar</code>. After pointing <code>bar</code> to null (as stated in the second point in the guideline), there&#39;s nothing left that points to the memory storing the string containing <code>..</code>, making it impossible to deallocate and forced to remain in the RAM throughout the whole duration of the program. These situations are called <strong>Memory Leaks</strong>, and can be remedied by following the first guideline as stated earlier as seen below:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">std::string *bar = new std::string;
+*bar = &quot;..&quot;;
+std::cout &lt;&lt; *bar &lt;&lt; std::endl; 
+delete bar; // deletes the object pointed to by bar, not bar itself
+bar = null
+</code></pre></div>
+<p>Another type of problem presented by mishandling pointers is the <strong>Dangling Pointer</strong>, which happens when an pointer points to a memory address that, at the time of accessing, has not been allocated. It&#39;s important to note that not being allocated is not equivalent to pointing to null. The following code snippet shows an example of a dangling pointer:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">int *bar = new int(5);
+delete bar;
+</code></pre></div>
+<p>Since the memory address stored in <code>bar</code> has been freed with <code>delete bar</code>, <code>bar</code> now points to a deallocated memory address. Dereferencing or assigning the address at this point may be unsafe and result in <strong>undefined behavior</strong>, so it&#39;s better to set <code>bar</code> to <code>null</code> to stay on the safer side of memory management.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">int *bar = new int(5);
+delete bar;
+bar = 0;
+std::cout &lt;&lt; bar &lt;&lt; std::endl; // Output: 0x0 (null)
+</code></pre></div>
+<p>Beyond the band-aid fix of setting a pointer to null, however, it would be better to modify the code in a way that there would be no need to set the pointer to null to begin with. 
+Most examples here are trivial and meant to showcase pointer syntax above anything else. In reality, pointers can be used in OOP and to allocate memory in more resource-hungry programs to maximise their performance.</p>
+
+<h2>References</h2>
+
+<p>A <strong>Reference</strong> holds another variable of the same declared type, and serves as its alias. Its behavior is relatable to how a person can (but may not) be referred to by multiple nicknames or aliases while maintaining one full name. It can be declared and must be defined using <code>data_type &amp;identifier</code>. Similarly with <code>*</code>, note that the <code>&amp;</code> used when declaring a reference is not the same as the referencing operator <code>&amp;</code> used in the earlier examples. Unlike pointers, a reference cannot be null or re-assigned after being defined. </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">std::string foo = &quot;..&quot;;
+std::string&amp; bar = foo;
+
+bool foobar = (foo==bar);
+std::cout &lt;&lt; foobar &lt;&lt; std::endl; // output: 1
+</code></pre></div>
+<p>In a way, references work similarly to pointers with more limitations and are <code>const</code> in nature. The existence of references, however, is not fully redundant - operations involving references are generally safer than those involving pointers, and are usually used unless the situation demands functions exclusive to pointers (recall how pointers can be reassigned, while references cannot). References are also generally easier to use, as there&#39;s no need to keep track of dangling pointers or inaccessible memory. While I won&#39;t be going through the in-depth uses of references, I&#39;ve written one instance that showcases their functionality and definition well.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">void swap_val (int foo, int bar) {
+    int qux = foo;
+    foo = bar;
+    bar = qux;
+}
+</code></pre></div>
+<p>When the above function <code>swap_val (a, b)</code> is called in an external function, the parameters <code>foo</code> and <code>bar</code> are merely copies of the values stored in <code>a</code> and <code>b</code>. As a result, calling this function will not result in swapping the actual values of <code>a</code> and <code>b</code> outside the function. When this behaviour happens in a function, it&#39;s said that its parameters <strong>pass by value</strong>. In the alternative function below,</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">void swap_ref (int &amp;foo, int &amp;bar) {
+    int qux = foo;
+    foo = bar;
+    bar = qux;
+}
+</code></pre></div>
+<p>Notice that references are passed instead of actual <code>int</code> parameters. When <code>swap_ref (a, b)</code> is called, what&#39;s passed to the function are <em>references to a and b</em>, and not just copies of their values. When this behavior occurs, a function&#39;s parameters are said to <strong>pass by value</strong>. Now, when the function calls operations on references of <code>a</code> and <code>b</code>, they are actually called on the variables <code>a</code> and <code>b</code> passed as parameters as well. As a result,</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">int foo = 10;
+int bar = 20;
+swap_val (foo, bar);
+std::cout &lt;&lt; foo &lt;&lt; std::endl; // Output: 10
+std::cout &lt;&lt; bar &lt;&lt; std::endl; // Output: 20
+
+swap_ref (foo, bar);
+swap_val (foo, bar);
+std::cout &lt;&lt; foo &lt;&lt; std::endl; // Output: 20
+std::cout &lt;&lt; bar &lt;&lt; std::endl; // Output: 10  
+</code></pre></div>
+<p>References are normally inaccessible in languages that maintain high level functionalities (including Java), making the language <strong>pass by value</strong> as a whole by default. What&#39;s good about the availability of access to references in C++ is the option to pass parameters either by value or by reference to functions, resulting in more versatile ways to code.</p>
+
+<h2>Summary</h2>
+
+<p>Here&#39;s a list of the terminologies used throughout the article:</p>
+
+<table>
+    <tr>
+        <td width=24%><strong>TERM</strong></td>
+        <td width=24%><strong>SAMPLE USAGE</strong></td>
+        <td width=52%><strong>DEFINITION</strong></td>
+    </tr>
+
+    <tr>
+        <td>Pointer</td>
+        <td><code>int *foo</code></td>
+        <td>A data type that stores a memory address</td>
+    </tr>
+
+    <tr>
+        <td>Reference (noun)</td>
+        <td><code>int &foo</code></td>
+        <td>A data type that serves as an alias to another variable</td>
+
+    </tr>
+
+
+
+    <tr>
+        <td>Dereference</td>
+        <td><code>*bar</code></td>
+        <td>To get the object stored in a memory address or pointer with the <code>*</code> operator</td>
+    </tr>
+
+    <tr>
+        <td>Memory Leak</td>
+        <td><code>n/a</code></td>
+        <td>Result of memory addresses that can no longer be accessed and deallocated</td>
+    </tr>
+
+    <tr>
+        <td>Dangling Pointers</td>
+        <td><code>n/a</code></td>
+        <td>Result of deallocating a memory address a pointer is pointing to</td>
+    </tr>
+
+    <tr>
+        <td>Undefined Behavior</td>
+        <td><code>n/a</code></td>
+        <td>Result of illogical operations (eg. dereferencing a dangling pointer)</td>
+    </tr>
+
+    <tr>
+        <td>Pass</td>
+        <td><code>foo (a, b)</code></td>
+        <td>Action taken on parameters used when calling a function</td>
+    </tr>
+
+    <tr>
+        <td>Pass by Value</td>
+        <td><code>void (int foo)</code></td>
+        <td>Behavior in which functions operate on copies or clones of passed parameters</td>
+    </tr>
+
+    <tr>
+        <td>Pass by Reference </td>
+        <td><code>void (int &foo)</code></td>
+        <td>Behavior in which functions operate on aliases leading to the passed parameters</td>
+    </tr>
+
+</table>
+
+<h2>Further Reading</h2>
+
+<p>There&#39;re a number of common applications for references and pointers that I did not cover in this entry - here&#39;s a small list of those:</p>
+
+<ul>
+<li><strong>Memory Management: Stacks and Heaps</strong>: In short, normal declared variables are allocated to the stack while variables called with <code>new</code> and pointers are allocated in the heap. Reading up on this will allow you to have a better understanding of what happens on a lower level beyond the the code and how memory is managed through code.</li>
+<li><strong>Nesting (de)referencing operators</strong>: It&#39;s possible to call data types such as <code>type **identifier</code> to create a pointer to a pointer, or to use combinations of <code>&amp;</code> and <code>*</code> to create variable types that may eventually come in handy. Understanding how nested operators work will also provide a stronger foundation in C++ OOP than what&#39;s covered in this article.</li>
+<li><strong>Pointers and Arrays</strong>: These two are closely related and reading up on them can explain the similarities in data types such as <code>char *</code> and <code>int *</code> when declaring an array or a pointer.</li>
+<li><strong>Parameters and Return Values</strong>: Pointers and References, like any other variable, can be used as parameters and return values when implementing functions. You will likely encounter terms such as <em>pass by value</em> and <em>pass by reference</em>, which were introduced briefly earlier in this guide.</li>
+<li><strong>Smart Pointers</strong>: More modern pointers that can be configured to or automatically delete pointers after a specified event. These, for the most part, get rid of the dangerous side of memory management that come with using regular pointers.</li>
+</ul>
+
+  </article>
+
+  <div align="center">
+  	<a href="#">
+  	<i class="fa fa-arrow-circle-up fa-2x"></i>
+  	</a>
+  </div>
+
+</div>
+      </div>
+    </div>
+
+    <div class="footer" align="center">
+
+  Copyright &copy; <a href=http://diezcami.github.io target="_blank">Camille Diez</a> 2015<BR />
+  Powered by <a href=http://jekyllrb.com target="_blank">Jekyll</a>
+
+</div>
+
+
+  </body>
+
+</html>
