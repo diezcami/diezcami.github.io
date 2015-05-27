@@ -2,8 +2,6 @@
 layout: post
 title: "OSX: Fixing Slow Wakes and Automatic Shutdowns"
 date: 2015-04-28 14:29:21 +0800
-comments: true
-categories: [OSX, UNIX]
 ---
 All these commands have been personally tested on my Macbook Pro running OSX Yosemite 10.10.3.
 

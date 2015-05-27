@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Hello, World!"
-date: 2015-04-27 20:48:06 +0800
-comments: true
-categories: 
+date: 2015-04-27 20:48:06 +0800 
 ---
 
 Hi, I'm Cami! This is the first pass of my attempt at making a personal blog. I've yet to learn how to work around the Octopress/Jekyll framework without looking up references often, but I'm certain I'll find my way around them in due time. 

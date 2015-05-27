@@ -2,8 +2,6 @@
 layout: post
 title: "Why Learning how to Program is Hard"
 date: 2015-05-11 15:14:57 +0800
-comments: true
-categories: programming
 ---
 I believe learning how to program is manageable in this day and age, with just about every answer being one google search away - there's a multitude of free books, videos and even courses available online for any topic under programming, and even a website literally created to have people solve any kind of programming inquiry or problem you've had. Despite this, it's not uncommon to hear people say how programming is difficult, and (for the extremes) how anyone who says otherwise is a liar.
 

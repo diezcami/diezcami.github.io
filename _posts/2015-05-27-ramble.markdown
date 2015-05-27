@@ -2,8 +2,6 @@
 layout: post
 title: "A Ramble on Github and Open Source Development"
 date: 2015-05-27 02:34:25 +0800
-comments: true
-categories: [Programming, Github]
 --- 
 While I spent the past month studying C++, I also took the time to look into **Github** a little more seriously in order to improve my profile as a developer. I realized it's been exactly a month since I published my first commit, and thought it wouldn't be a bad idea to document my experience with Github so far.
 
@@ -16,6 +14,8 @@ In the summer of 2015, I encountered a blog that ran on [Octopress](http://octop
 The installing instructions were really simple and straightforward - all I needed to do was to install several dependencies and run a few commands on the terminal. At this time, I wasn't 100% familiar with what I was doing, but knew enough to get by and managed to get all the files installed in a local directory. The problems arose when I tried deploying my blog to Github Pages without fully knowing the fundamentals of Git.
 
 I say fully knowing because I was somewhat familiar with Git - I figured `git add` was self-explanatory, and other commands like `git commit` and `git push` seemed pretty straightforward. What I didn't know then was how Octopress had **gems** that actually did the deploying for me, and how the only time I had to use Git commands at all was to push files to the source branch for version control (which I also did not understand then). I had no idea how branches worked then, and ended up typing several Terminal commands that only deepened the hole I dug for myself. By the end of the day, I ended up with mismatched heads, branches that weren't in sync and a 404 page on my blog domain. 
+
+![](/blog/resources/images/2015052701.png)
 
 After a while, I realized what `rake deploy` was for, and that actually I didn't need to manually push anything to the master branch. After finally deploying my blog and tweaking its HTML/CSS, I started writing posts once a week and familiarizing myself with Git syntax once again with much less confusion and a more thorough understanding of what I was doing.
 
@@ -35,12 +35,12 @@ After dipping my feet into contributing on Github, I began looking for repositor
 
 I submitted my second ever [pull request](https://github.com/nvbn/thefuck/pull/216), which addressed issue brought up by another developer. The code I wrote wasn't as optimised as I'd wanted, and I wrote a whole paragraph asking how I could implement the code I originally wanted to use without raising errors. To my surprise yet again, the author replied an hour later saying 'Thanks!', merged the request, and probably went on with his life.
 
-![Pull Requests](/resources/images/2015052701.png)
+![](/blog/resources/images/2015052702.png)
 
 All the work, frustration and hours I had invested into figuring out how to contribute to open source projects finally paid off - and it felt great! Not only did I learn how to use `git pull`, `git merge` and several other commands - I also managed to develop a feature on a project that wasn't mine for the first time, which is a pretty significant milestone for me as a programmer. I fell in love with open source development, and became more dedicated than ever to contribute to an even wider array of projects.
 
 ## What Now?
-![Pull Requests](/resources/images/2015052702.png)
+![](/blog/resources/images/2015052703.png)
 
 I've only been using Github for a month and have been looking at public repositories for less than a week, so there's a lot of concepts and practices I've yet to learn regarding open source. Despite this, I'm no longer afraid of Git or repositories that're  beyond me, and am instead excited to see what else I can learn from Github. I hope to one day be able to look back at this post with more insights as a programmer and an open source developer.
 

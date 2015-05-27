@@ -2,8 +2,6 @@
 layout: post
 title: "A Quick Guide to Aliasing Terminal Commands"
 date: 2015-05-19 02:34:25 +0800
-comments: true
-categories: [UNIX, OSX, Linux]
 ---
 This guide will probably only be useful to you if you find yourself using the **Terminal** a lot whether on Linux/OS X. Here, I'll be talking about aliases and how you could use them in your daily work to maximize your productivity and, to an extent, maintain your sanity while working with a mountain of commands.
 

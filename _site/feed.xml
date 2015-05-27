@@ -6,8 +6,8 @@
 </description>
     <link>http://diezcami.github.io/blog/</link>
     <atom:link href="http://diezcami.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 May 2015 02:00:26 +0800</pubDate>
-    <lastBuildDate>Thu, 28 May 2015 02:00:26 +0800</lastBuildDate>
+    <pubDate>Thu, 28 May 2015 02:11:38 +0800</pubDate>
+    <lastBuildDate>Thu, 28 May 2015 02:11:38 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -25,6 +25,8 @@
 &lt;p&gt;The installing instructions were really simple and straightforward - all I needed to do was to install several dependencies and run a few commands on the terminal. At this time, I wasn&amp;#39;t 100% familiar with what I was doing, but knew enough to get by and managed to get all the files installed in a local directory. The problems arose when I tried deploying my blog to Github Pages without fully knowing the fundamentals of Git.&lt;/p&gt;
 
 &lt;p&gt;I say fully knowing because I was somewhat familiar with Git - I figured &lt;code&gt;git add&lt;/code&gt; was self-explanatory, and other commands like &lt;code&gt;git commit&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt; seemed pretty straightforward. What I didn&amp;#39;t know then was how Octopress had &lt;strong&gt;gems&lt;/strong&gt; that actually did the deploying for me, and how the only time I had to use Git commands at all was to push files to the source branch for version control (which I also did not understand then). I had no idea how branches worked then, and ended up typing several Terminal commands that only deepened the hole I dug for myself. By the end of the day, I ended up with mismatched heads, branches that weren&amp;#39;t in sync and a 404 page on my blog domain. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/resources/images/2015052701.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;After a while, I realized what &lt;code&gt;rake deploy&lt;/code&gt; was for, and that actually I didn&amp;#39;t need to manually push anything to the master branch. After finally deploying my blog and tweaking its HTML/CSS, I started writing posts once a week and familiarizing myself with Git syntax once again with much less confusion and a more thorough understanding of what I was doing.&lt;/p&gt;
 
@@ -46,26 +48,22 @@
 
 &lt;p&gt;I submitted my second ever &lt;a href=&quot;https://github.com/nvbn/thefuck/pull/216&quot;&gt;pull request&lt;/a&gt;, which addressed issue brought up by another developer. The code I wrote wasn&amp;#39;t as optimised as I&amp;#39;d wanted, and I wrote a whole paragraph asking how I could implement the code I originally wanted to use without raising errors. To my surprise yet again, the author replied an hour later saying &amp;#39;Thanks!&amp;#39;, merged the request, and probably went on with his life.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/resources/images/2015052701.png&quot; alt=&quot;Pull Requests&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/resources/images/2015052702.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;All the work, frustration and hours I had invested into figuring out how to contribute to open source projects finally paid off - and it felt great! Not only did I learn how to use &lt;code&gt;git pull&lt;/code&gt;, &lt;code&gt;git merge&lt;/code&gt; and several other commands - I also managed to develop a feature on a project that wasn&amp;#39;t mine for the first time, which is a pretty significant milestone for me as a programmer. I fell in love with open source development, and became more dedicated than ever to contribute to an even wider array of projects.&lt;/p&gt;
 
 &lt;h2&gt;What Now?&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/resources/images/2015052702.png&quot; alt=&quot;Pull Requests&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/resources/images/2015052703.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;I&amp;#39;ve only been using Github for a month and have been looking at public repositories for less than a week, so there&amp;#39;s a lot of concepts and practices I&amp;#39;ve yet to learn regarding open source. Despite this, I&amp;#39;m no longer afraid of Git or repositories that&amp;#39;re  beyond me, and am instead excited to see what else I can learn from Github. I hope to one day be able to look back at this post with more insights as a programmer and an open source developer.&lt;/p&gt;
 
 &lt;p&gt;Thanks for reading!&lt;/p&gt;
 </description>
         <pubDate>Wed, 27 May 2015 02:34:25 +0800</pubDate>
-        <link>http://diezcami.github.io/blog/programming/github/2015/05/27/ramble.html</link>
-        <guid isPermaLink="true">http://diezcami.github.io/blog/programming/github/2015/05/27/ramble.html</guid>
+        <link>http://diezcami.github.io/blog/2015/05/27/ramble.html</link>
+        <guid isPermaLink="true">http://diezcami.github.io/blog/2015/05/27/ramble.html</guid>
         
-        
-        <category>programming</category>
-        
-        <category>github</category>
         
       </item>
     
@@ -111,15 +109,9 @@ alias g++11=&amp;quot;g++ -std=c++11&amp;quot;
 &lt;p&gt;Thanks for reading my guide!&lt;/p&gt;
 </description>
         <pubDate>Tue, 19 May 2015 02:34:25 +0800</pubDate>
-        <link>http://diezcami.github.io/blog/unix/osx/linux/2015/05/19/a-quick-guide-to-aliasing-terminal-commands.html</link>
-        <guid isPermaLink="true">http://diezcami.github.io/blog/unix/osx/linux/2015/05/19/a-quick-guide-to-aliasing-terminal-commands.html</guid>
+        <link>http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands.html</link>
+        <guid isPermaLink="true">http://diezcami.github.io/blog/2015/05/19/a-quick-guide-to-aliasing-terminal-commands.html</guid>
         
-        
-        <category>unix</category>
-        
-        <category>osx</category>
-        
-        <category>linux</category>
         
       </item>
     
@@ -149,11 +141,9 @@ alias g++11=&amp;quot;g++ -std=c++11&amp;quot;
 &lt;p&gt;That being said, relax! Programming is a one trick pony that makes you know less as you learn more - and the sooner you&amp;#39;re comfortable with coding and the uncertainty that comes with it, the better you&amp;#39;ll become at handling any kind of problem thrown at you in time.&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 May 2015 15:14:57 +0800</pubDate>
-        <link>http://diezcami.github.io/blog/programming/2015/05/11/why-programming-is-hard.html</link>
-        <guid isPermaLink="true">http://diezcami.github.io/blog/programming/2015/05/11/why-programming-is-hard.html</guid>
+        <link>http://diezcami.github.io/blog/2015/05/11/why-programming-is-hard.html</link>
+        <guid isPermaLink="true">http://diezcami.github.io/blog/2015/05/11/why-programming-is-hard.html</guid>
         
-        
-        <category>programming</category>
         
       </item>
     
@@ -352,13 +342,9 @@ std::cout &amp;lt;&amp;lt; bar &amp;lt;&amp;lt; std::endl; // Output: 10
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 08 May 2015 11:33:15 +0800</pubDate>
-        <link>http://diezcami.github.io/blog/programming/c++/2015/05/08/c-plus-plus-pointers-and-references-an-overview.html</link>
-        <guid isPermaLink="true">http://diezcami.github.io/blog/programming/c++/2015/05/08/c-plus-plus-pointers-and-references-an-overview.html</guid>
+        <link>http://diezcami.github.io/blog/2015/05/08/c-plus-plus-pointers-and-references-an-overview.html</link>
+        <guid isPermaLink="true">http://diezcami.github.io/blog/2015/05/08/c-plus-plus-pointers-and-references-an-overview.html</guid>
         
-        
-        <category>programming</category>
-        
-        <category>c++</category>
         
       </item>
     
@@ -431,13 +417,9 @@ The default value for &lt;code&gt;autopoweroffdelay&lt;/code&gt; is 14400, which
 &lt;p&gt;All the commands mentioned in this post will remain after shutting off your machine, so there&amp;#39;s no need to do the procedures after every boot-up. You can always confirm the settings by calling &lt;code&gt;sudo pmset -g&lt;/code&gt; in Terminal. I&amp;#39;ve covered most of what you need to know to fix the most noticeable sleep and wake issues implemented by default in OSX - if you want to mess with the other variables, you can read up on them &lt;a href=&quot;http://en.wikipedia.org/wiki/Pmset&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 28 Apr 2015 14:29:21 +0800</pubDate>
-        <link>http://diezcami.github.io/blog/osx/unix/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns.html</link>
-        <guid isPermaLink="true">http://diezcami.github.io/blog/osx/unix/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns.html</guid>
+        <link>http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns.html</link>
+        <guid isPermaLink="true">http://diezcami.github.io/blog/2015/04/28/osx-fixing-slow-wakes-and-automatic-shutdowns.html</guid>
         
-        
-        <category>osx</category>
-        
-        <category>unix</category>
         
       </item>
     

@@ -2,8 +2,6 @@
 layout: post
 title: "C++ Pointers and References: An Overview"
 date: 2015-05-08 11:33:15 +0800
-comments: true
-categories: [programming, c++]
 ---
 References and pointers are usually, in one way or another, implemented in every programming language; higher level languages, however, most likely do not provide explicit access to them. As a result, they often come up implicitly in the form of garbage collection and simpler OOP conventions. On the other hand, languages that have more freedom at lower levels such as C/C++ allow users to explicitly use pointers and references to manually control several aspects of a program including, but not limited to memory management/allocation, OOP and ease of access. 
 
