@@ -6,13 +6,13 @@
 </description>
     <link>http://diezcami.github.io/blog/</link>
     <atom:link href="http://diezcami.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 May 2015 01:12:33 +0800</pubDate>
-    <lastBuildDate>Thu, 28 May 2015 01:12:33 +0800</lastBuildDate>
+    <pubDate>Thu, 28 May 2015 02:00:26 +0800</pubDate>
+    <lastBuildDate>Thu, 28 May 2015 02:00:26 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>A Ramble on Github and Open Source Development</title>
-        <description>&lt;p&gt;While I spent the past month studying C++, I also took the time to look into &lt;strong&gt;Github&lt;/strong&gt; a little more seriously in order to improve my profile as a developer.&lt;/p&gt;
+        <description>&lt;p&gt;While I spent the past month studying C++, I also took the time to look into &lt;strong&gt;Github&lt;/strong&gt; a little more seriously in order to improve my profile as a developer. I realized it&amp;#39;s been exactly a month since I published my first commit, and thought it wouldn&amp;#39;t be a bad idea to document my experience with Github so far.&lt;/p&gt;
 
 &lt;h2&gt;Github: First Impressions&lt;/h2&gt;
 
@@ -46,13 +46,17 @@
 
 &lt;p&gt;I submitted my second ever &lt;a href=&quot;https://github.com/nvbn/thefuck/pull/216&quot;&gt;pull request&lt;/a&gt;, which addressed issue brought up by another developer. The code I wrote wasn&amp;#39;t as optimised as I&amp;#39;d wanted, and I wrote a whole paragraph asking how I could implement the code I originally wanted to use without raising errors. To my surprise yet again, the author replied an hour later saying &amp;#39;Thanks!&amp;#39;, merged the request, and probably went on with his life.&lt;/p&gt;
 
-&lt;p&gt;I felt even better than I did when my first pull request got merged, and was probably more ecstatic than I should&amp;#39;ve been. All the work I had put into understanding how the project worked was worth it, &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/resources/images/2015052701.png&quot; alt=&quot;Pull Requests&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;%22resources/2015-05-27-ramble/pullrequests.png%22&quot; alt=&quot;Pull Requests&quot;&gt;&lt;/p&gt;
+&lt;p&gt;All the work, frustration and hours I had invested into figuring out how to contribute to open source projects finally paid off - and it felt great! Not only did I learn how to use &lt;code&gt;git pull&lt;/code&gt;, &lt;code&gt;git merge&lt;/code&gt; and several other commands - I also managed to develop a feature on a project that wasn&amp;#39;t mine for the first time, which is a pretty significant milestone for me as a programmer. I fell in love with open source development, and became more dedicated than ever to contribute to an even wider array of projects.&lt;/p&gt;
 
 &lt;h2&gt;What Now?&lt;/h2&gt;
 
-&lt;p&gt;The steeper &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/resources/images/2015052702.png&quot; alt=&quot;Pull Requests&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve only been using Github for a month and have been looking at public repositories for less than a week, so there&amp;#39;s a lot of concepts and practices I&amp;#39;ve yet to learn regarding open source. Despite this, I&amp;#39;m no longer afraid of Git or repositories that&amp;#39;re  beyond me, and am instead excited to see what else I can learn from Github. I hope to one day be able to look back at this post with more insights as a programmer and an open source developer.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading!&lt;/p&gt;
 </description>
         <pubDate>Wed, 27 May 2015 02:34:25 +0800</pubDate>
         <link>http://diezcami.github.io/blog/programming/github/2015/05/27/ramble.html</link>
