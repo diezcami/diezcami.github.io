@@ -15,7 +15,7 @@
         line-height: $base-line-height;
         font-weight: 300;
         color: $text-color;
-        background-color: $background-color;
+        background-color: $background-color !important;
         -webkit-text-size-adjust: 100%;
     }
 
@@ -60,10 +60,10 @@
  * ============================================== */
     h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
-        margin: 0px;
+        margin-bottom: 0px;
     }
 
-    h1 {font-size: 1.9em !important;}
+    h1 {font-size: 1.9em !important; margin-top: 50px;}
     h2, {font-size: 1.5em !important;}
     h3 {font-size: 1.3em;}
     h4 {font-size: 1em;}

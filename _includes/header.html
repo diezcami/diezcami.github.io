@@ -1,6 +1,7 @@
 <div class="site-header">
 
     <nav class="site-nav">
+          <a class="page-link" href="{{ site.baseurl }}/">Home</a>
         {% for page in site.pages %}
           {% if page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
@@ -14,12 +15,6 @@
           Github
           </a>
     </nav>
-
-    <h1>
-     <span>
-      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-     </span>
-    </h1>
 
 
 </div>
