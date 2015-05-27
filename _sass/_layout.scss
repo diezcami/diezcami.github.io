@@ -3,38 +3,72 @@
     .site-header {
         height: 55px;
         background-color: #F5F5F5;
-        position: fixed;
+        position: relative;
         width: 100%;
     }
 
-    .site-header a {color: #00B2EE};
+    .site-header a {color: $brand-color};
 
     .site-nav {
+        padding-top: 16px;
         float: right;
-        line-height: 56px;
         margin-right: 25px;
-        padding-bottom: 100px;
-        font-family: 'Open Sans';
-        font-weight: 700 !important;
         text-transform: uppercase;
 
-        .page-link {
-            line-height: $base-line-height;
-            letter-spacing: 0.05em;
-
-            &:not(:first-child) {
-                margin-left: 20px;
-            }
-        }
-
-        .page-link:hover {
-            opacity: 0.8;
+        .menu-icon {
+            display: none;
         }
 
         @include media-query($on-palm) {
-            padding-bottom: 10px;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            background-color: $background-color;
+            border: 1px solid $grey-color-light;
+            border-radius: 5px;
+            text-align: right;
+
+            .menu-icon {
+                display: block;
+                float: right;
+                width: 50px;
+                height: 30px;
+                line-height: 0;
+                text-align: center;
+            }
+
+            .trigger {
+                clear: both;
+                display: none;
+            }
+
+            &:hover .trigger {
+                display: block;
+                padding-bottom: 5px;
+            }
+
+            .page-link {
+                display: block;
+                padding: 5px 10px;
+            }
         }
-    }
+
+        .page-link {
+            font-family: 'Open Sans';
+            font-weight: 700 !important;
+            line-height: $base-line-height;
+            letter-spacing: 0.05em;
+
+
+            &:not(:first-child) {
+                    margin-left: 20px;
+            }
+
+            &:hover {
+                opacity: 0.8
+            };
+        }
+}
 
 /* Site Footer
  * ============================================== */
@@ -110,10 +144,6 @@
         font-size: 42px;
         letter-spacing: -1px;
         line-height: 1;
-
-        @include media-query($on-laptop) {
-            font-size: 36px;
-        }
     }
 
     .post-content {

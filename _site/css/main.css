@@ -52,8 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px; }
 
 h1 {
-  font-size: 1.9em !important;
-  margin-top: 50px; }
+  font-size: 1.9em !important; }
 
 h2 {
   font-size: 1.5em !important; }
@@ -166,30 +165,53 @@ table {
 .site-header {
   height: 55px;
   background-color: #F5F5F5;
-  position: fixed;
+  position: relative;
   width: 100%; }
 
 .site-header a {
   color: #00B2EE; }
 
 .site-nav {
+  padding-top: 16px;
   float: right;
-  line-height: 56px;
   margin-right: 25px;
-  padding-bottom: 100px;
-  font-family: 'Open Sans';
-  font-weight: 700 !important;
   text-transform: uppercase; }
+  .site-nav .menu-icon {
+    display: none; }
+  @media screen and (max-width: 700px) {
+    .site-nav {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      background-color: #FFF;
+      border: 1px solid #cecece;
+      border-radius: 5px;
+      text-align: right; }
+      .site-nav .menu-icon {
+        display: block;
+        float: right;
+        width: 50px;
+        height: 30px;
+        line-height: 0;
+        text-align: center; }
+      .site-nav .trigger {
+        clear: both;
+        display: none; }
+      .site-nav:hover .trigger {
+        display: block;
+        padding-bottom: 5px; }
+      .site-nav .page-link {
+        display: block;
+        padding: 5px 10px; } }
   .site-nav .page-link {
+    font-family: 'Open Sans';
+    font-weight: 700 !important;
     line-height: 1.5;
     letter-spacing: 0.05em; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
-  .site-nav .page-link:hover {
-    opacity: 0.8; }
-  @media screen and (max-width: 700px) {
-    .site-nav {
-      padding-bottom: 10px; } }
+    .site-nav .page-link:hover {
+      opacity: 0.8; }
 
 /* Site Footer
  * ============================================== */
@@ -253,9 +275,6 @@ table {
   font-size: 42px;
   letter-spacing: -1px;
   line-height: 1; }
-  @media screen and (max-width: 700px) {
-    .post-title {
-      font-size: 36px; } }
 
 .post-content {
   margin-bottom: 30px;
