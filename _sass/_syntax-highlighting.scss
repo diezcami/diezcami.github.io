@@ -1,7 +1,7 @@
 /* Syntax Highlighting
  * ============================================== */
     .highlight {
-         .hll { background-color: #ffffcc }
+        .hll { background-color: #ffffcc }
         .c { color: #8f5902; font-style: italic } /* Comment */
         .err { color: #a40000; border: 1px solid #ef2929 } /* Error */
         .g { color: #000000 } /* Generic */
@@ -70,5 +70,4 @@
         .vg { color: #000000 } /* Name.Variable.Global */
         .vi { color: #000000 } /* Name.Variable.Instance */
         .il { color: #0000cf; font-weight: bold } /* Literal.Number.Integer.Long */
-
     }

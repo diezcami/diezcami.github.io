@@ -20,24 +20,22 @@
         }
 
         @include media-query($on-palm) {
+            padding-top: 13px;
+            right: 0px;
             position: absolute;
-            top: 3px;
-            right: 3px;
-            background-color: $background-color;
-            border: 1px solid $grey-color-light;
-            border-radius: 5px;
             text-align: right;
 
             .menu-icon {
                 display: block;
                 float: right;
-                width: 50px;
+                width: 30px;
                 height: 30px;
                 line-height: 0;
-                text-align: center;
             }
 
             .trigger {
+                background-color: $background-color;
+                border: 1px solid $grey-color-light;
                 clear: both;
                 display: none;
             }
@@ -120,6 +118,7 @@
         letter-spacing: -1px;
         color: #454545;
         display: block;
+        text-align: left;
         width: 100%;
 
         @include media-query($on-palm) {
@@ -137,13 +136,14 @@
 /* Post Format
  * ============================================== */
     .post-header {
-        margin-bottom: $spacing-unit;
+        margin-bottom: ($spacing-unit/3);
     }
 
     .post-title {
         font-size: 42px;
         letter-spacing: -1px;
         line-height: 1;
+        text-align: left;
     }
 
     .post-content {
