@@ -2,15 +2,18 @@
 ---
 @charset "utf-8";
 
-$base-font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$header-font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+$base-font-family: 'PT Sans', 'Helvetica', 'Arial', sans-serif;
+$base-font-color:  #454545;
+$base-font-weight: 300;
+$base-line-height: 1.5;
+$base-font-size:   15px;
 $small-font-size:  $base-font-size * 0.895;
 $large-font-size:  $base-font-size * 1.40;
-
-$base-line-height: 1.5;
 $spacing-unit:     30px;
 
-$text-color:       #454545;
+
+
 $background-color: #FFF;
 $brand-color:      #00B2EE;
 
