@@ -14,8 +14,23 @@ layout: default
     {{ content }}
   </article>
 
+  <!-- 
+  <div class="pagination">
+    {% if page.previous %}
+      <a class="post-meta" href="{{ page.previous.url | prepend: site.baseurl }}">
+        <i class="fa fa-arrow-left"></i> {{ page.previous.title }}
+      </a>
+    {% endif %}
+
+    {% if page.next %}
+      <a class="post-meta" href="{{ page.next.url | prepend: site.baseurl }}">
+        {{ page.next.title }} <i class="fa fa-arrow-right"></i>
+      </a>
+    {% endif %}
+  </div> -->
+
   <div align="center">
-  	<a href="#">
+  	<a class="arrow" href="#">
       <i class="fa fa-arrow-circle-up fa-2x"></i>
   	</a>
   </div>

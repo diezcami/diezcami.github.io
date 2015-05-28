@@ -31,6 +31,10 @@
                 width: 30px;
                 height: 30px;
                 line-height: 0;
+
+                &:hover {
+                    color: lighten($brand-color, 5%);
+                }
             }
 
             .trigger {
@@ -86,6 +90,13 @@
         margin-bottom: 3px;
   }
 
+    .footer a {
+        color: darken($grey-color, 10%);
+        &:hover {
+            color: darken($grey-color, 60%) ;
+        }
+    }
+
 /* Individual Posts
  * ============================================== */
     .page-content {
@@ -123,6 +134,10 @@
 
         @include media-query($on-palm) {
             font-size: 1.33em;
+        }
+
+        &:hover {
+            color: darken($grey-color, 80%) ;
         }
     }
 
