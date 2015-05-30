@@ -84,6 +84,48 @@
         }
     }
 
+    .resume {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #FFF;
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        background-color: $brand-color;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: darken($brand-color, 2%);
+            color: #FFF;
+        }
+
+        @include media-query($on-palm) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .link {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #888;
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        background-color: #EFEFEF;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: darken(#EFEFEF, 2%);
+            color: #888;
+        }
+
+        @include media-query($on-palm) {
+            display: block;
+            text-align: center;
+        }
+    }
+
 /* Block Quotes
  * ============================================== */
     blockquote {
