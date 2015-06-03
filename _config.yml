@@ -3,8 +3,8 @@ title: Camille Diez
 email: diezcami@gmail.com
 description: >
   Hi, I'm Cami! Here, I write on topics related to programming, development, open source and anything related to my line of work.
-baseurl: "/blog" 
-url: "http://diezcami.github.io"
+baseurl: "" 
+url: "http://diezcami.me"
 twitter_username: 
 github_username:  diezcami
 
