@@ -21,8 +21,7 @@ Right now, I'm passionate about learning Go and Ruby (on Rails), as I find web d
     <a class="link" href='http://twitter.com/diezcamille' target="_blank">
       <i class="fa fa-twitter"></i> Twitter
     </a>
-<!-- REMOVE WHEN URL CHANGES
     <a class="link" href='http://diezcami.vsco.co' target="_blank">
       <i class="fa fa-camera"></i> VSCO
-    </a> -->
+    </a>
 </div>
