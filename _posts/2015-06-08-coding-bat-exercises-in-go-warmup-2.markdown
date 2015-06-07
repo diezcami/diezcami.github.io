@@ -3,6 +3,8 @@ layout: post
 title: "CodingBat Exercises in Go: Warmup-2"
 date: 2015-06-08 02:02:32 +0800
 --- 
+Warmup-2 covers arrays, slices and control flow. Like the problems in Warmup-1, the problems didn't call for any syntax features exclusive to Go; however, I still managed to learn several practices involving loops with blank variables and the `:=` operator.
+
 The problems below have been taken from [CodingBat's Python Exercises](http://codingbat.com/python), while all solutions were written by me. I've used `go fmt` and conducted tests for my codes, but please don't hold it against me if I've missed a few edge cases somewhere. All solutions are licensed under MIT.
 
 ### string_times ###
@@ -150,19 +152,3 @@ func string_match(a, b string) int {
     return count
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
