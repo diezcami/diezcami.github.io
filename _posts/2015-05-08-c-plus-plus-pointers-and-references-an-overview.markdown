@@ -166,12 +166,28 @@ Here's a list of the terminologies used throughout the article:
 
 	</tr>
 
-
+	<tr>
+		<td>Reference (verb)</td>
+		<td><code>&bar</code></td>
+		<td>To get the address of a variable using the <code>&</code> operator</td>
+	</tr>
 
 	<tr>
 		<td>Dereference</td>
 		<td><code>*bar</code></td>
 		<td>To get the object stored in a memory address or pointer with the <code>*</code> operator</td>
+	</tr>
+
+	<tr>
+		<td>Allocate (verb)</td>
+		<td><code>n/a</code></td>
+		<td>To reserve memory for an object</td>
+	</tr>
+
+	<tr>
+		<td>Deallocate (verb)</td>
+		<td><code>*bar</code></td>
+		<td>To make previously allocated memory available again</td>
 	</tr>
 
 	<tr>
