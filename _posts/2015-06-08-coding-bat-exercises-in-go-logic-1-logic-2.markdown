@@ -163,7 +163,7 @@ func near_ten(num int) bool {
 }
 ```
 
-<hr style="margin-bottom: -10px; margin-top: 27px">
+<hr style="margin-bottom: 5px; margin-top: 27px">
 # Logic-2 #
 Logic-2 covers slightly more advanced program solving techniques. The solutions are still language agnostic other than those with functions defined inside separate functions, so there's nothing much to see here unless you're currently learning your first programming language.
 

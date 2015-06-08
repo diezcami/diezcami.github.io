@@ -129,7 +129,7 @@ func front3(str string) string {
 }
 ```
 
-<hr style="margin-bottom: -10px; margin-top: 27px">
+<hr style="margin-bottom: 5px; margin-top: 27px">
 # Warmup-2 #
 Warmup-2 covers arrays, slices and control flow. Similarly to Warmup-1, the problems didn't call for any syntax features exclusive to Go; however, I still managed to learn several practices involving loops with blank variables and the `:=` operator.
 

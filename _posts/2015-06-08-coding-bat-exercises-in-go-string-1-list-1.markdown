@@ -130,7 +130,7 @@ func left2(str string) string {
 }
 ```
 
-<hr style="margin-bottom: -10px; margin-top: 27px">
+<hr style="margin-bottom: 5px; margin-top: 27px">
 # List-1 #
 List-1 covers array and slice manipulation. The solutions are mostly language agnostic, so there's nothing much to see if you're not entirely new to programming.
 
