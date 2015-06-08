@@ -6,10 +6,7 @@ date: 2015-06-08 18:43:49 +0800
 I've reached a certain peak of comfortability with Go at this point, and will no longer continue the CodingBat series on my blog. Thanks for tuning in!
 
 The problems below have been taken from [CodingBat's Python Exercises](http://codingbat.com/python), while all solutions were written by me. I've used `go fmt` and conducted tests for my codes, but please don't hold it against me if I've missed a few edge cases somewhere. All solutions are licensed under MIT.
-
-
-
-
+<hr style="margin-bottom: -10px">
 # Logic-1 #
 Logic-1 covers control flow. I implemented some of Go's syntax features in my solutions whenever possible, namely functions within functions and if statements with `;` operators.
 
@@ -166,8 +163,7 @@ func near_ten(num int) bool {
 }
 ```
 
-<BR>
-
+<hr style="margin-bottom: -10px; margin-top: 27px">
 # Logic-2 #
 Logic-2 covers slightly more advanced program solving techniques. The solutions are still language agnostic other than those with functions defined inside separate functions, so there's nothing much to see here unless you're currently learning your first programming language.
 

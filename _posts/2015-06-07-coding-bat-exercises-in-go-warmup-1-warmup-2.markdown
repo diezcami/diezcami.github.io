@@ -6,10 +6,7 @@ date: 2015-06-07 14:38:16 +0800
 I've learned a number of languages this summer, but Go/Golang stood out as its structure was different compared to the likes of Java/C++. Learning it felt very counter intuitive, as concepts as fundamental as method signatures and variable declarations felt backwards (literally) and foreign. I've been burnt out trying to absorb everything about Go and its features lately, so I thought it'd be a good idea to start from scratch using CodingBat exercises.
 
 The problems below have been taken from [CodingBat's Python Exercises](http://codingbat.com/python), while all solutions were written by me. I've used `go fmt` and conducted tests for my codes, but please don't hold it against me if I've missed a few edge cases somewhere. All solutions are licensed under MIT.
-
-
-
-
+<hr style="margin-bottom: -10px">
 # Warmup-1 #
 Warmup-1 was as basic as I expected it to be - I didn't find myself wanting to use syntax features exclusive to Go or needing to refer to package API's. I managed to familiarize myself with how string manipulation works in Go (it's similar to Python, with understandably less magic) and the limitations of the built-in `math` library. Above all, I managed to get used to the backwards syntax of variable declaration and method signatures.
 
@@ -132,8 +129,7 @@ func front3(str string) string {
 }
 ```
 
-<BR>
-
+<hr style="margin-bottom: -10px; margin-top: 27px">
 # Warmup-2 #
 Warmup-2 covers arrays, slices and control flow. Similarly to Warmup-1, the problems didn't call for any syntax features exclusive to Go; however, I still managed to learn several practices involving loops with blank variables and the `:=` operator.
 

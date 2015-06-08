@@ -4,10 +4,7 @@ title: "CodingBat Exercises in Go: String-1, List-1"
 date: 2015-06-08 02:55:16 +0800
 --- 
 The problems below have been taken from [CodingBat's Python Exercises](http://codingbat.com/python), while all solutions were written by me. I've used `go fmt` and conducted tests for my codes, but please don't hold it against me if I've missed a few edge cases somewhere. All solutions are licensed under MIT.
-
-
-
-
+<hr style="margin-bottom: -10px">
 # String-1 #
 String-1 provided opportunities for me to define functions inside a separate function, as well as create functions that returned multiple values. Other than that, the problems were predominantly solvable with language agnostic solutions. 
 
@@ -133,9 +130,7 @@ func left2(str string) string {
 }
 ```
 
-<BR>
-
-
+<hr style="margin-bottom: -10px; margin-top: 27px">
 # List-1 #
 List-1 covers array and slice manipulation. The solutions are mostly language agnostic, so there's nothing much to see if you're not entirely new to programming.
 
