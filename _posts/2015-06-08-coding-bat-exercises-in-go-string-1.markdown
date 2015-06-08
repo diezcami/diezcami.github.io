@@ -126,24 +126,3 @@ func left2(str string) string {
     return str[2:] + str[:2]
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
