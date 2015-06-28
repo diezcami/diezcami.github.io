@@ -17,7 +17,11 @@ Right now, I'm passionate about learning Go and Ruby (on Rails), as I find web d
     </a>
     <a class="link" href="mailto:diezcami@gmail.com" target="_blank">
       <i class="fa fa-envelope"></i> Email
-    </a> <!-- 
+    </a> 
+    <a class="link" href='http://diezcami.vsco.co' target="_blank">
+      <i class="fa fa-camera-retro"></i> VSCO
+    </a> 
+    <!-- 
     <a class="link" href='http://twitter.com' target="_blank">
       <i class="fa fa-twitter"></i> Twitter
     </a> -->
