@@ -8,7 +8,7 @@ notitle: true
 I’m a 20 year old university student taking up Computer Science in Manila. I love learning, building and doing just about anything with code. If I'm not programming, I'm probably studying for my university classes, tinkering my gadgets, taking a few [photos](http://diezcami.vsco.co), or painting.
 
 # Skills
-Right now, I'm passionate about learning Go and using it for my personal projects, while also learning iOS/OSX development on the side. I use C++, Java and Python regularly in the context of school work and open source contributions, though I'm also experienced with and quickly adaptable to working with several other languages and frameworks. 
+I spend most of my coding time either building something with Go, or learning iOS/OS X development. I use C++, Java and Python regularly in the context of school work and open source contributions, though I'm also experienced with and quickly adaptable to working with other languages and frameworks. 
 
 # Links
 <div style="text-align: left">
