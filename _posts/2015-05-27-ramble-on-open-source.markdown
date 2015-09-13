@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Ramble on Github and Open Source Development"
+title: "A Ramble on Open Source Development"
 date: 2015-05-27 02:34:25 +0800
 --- 
 While I spent the past month studying C++, I also took the time to look into **Github** a little more seriously in order to improve my profile as a developer. I realized it's been exactly a month since I published my first commit, and thought it wouldn't be a bad idea to document my experience with Github so far.

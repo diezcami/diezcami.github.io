@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Setting up Go on your OS X Machine"
+title: "Setting up Go on OS X"
 date: 2015-06-12 23:00:10 +0800
 --- 
 Go is easily one of my favorite proramming languages due to its features and performance for web based projects. Installing it is relatively simple and should take about 5-10 minutes tops.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CodingBat Exercises in Go: Warmup-1, Warmup-2"
+title: "CodingBat in Go: Warmup-1, Warmup-2"
 date: 2015-06-07 14:38:16 +0800
 --- 
 I've learned a number of languages this summer, but Go/Golang stood out as its structure was different compared to the likes of Java/C++. Learning it felt very counter intuitive, as concepts as fundamental as method signatures and variable declarations felt backwards (literally) and foreign. I've been burnt out trying to absorb everything about Go and its features lately, so I thought it'd be a good idea to start from scratch using CodingBat exercises.

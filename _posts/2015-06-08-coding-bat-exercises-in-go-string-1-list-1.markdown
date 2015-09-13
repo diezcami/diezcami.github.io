@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CodingBat Exercises in Go: String-1, List-1"
+title: "CodingBat in Go: String-1, List-1"
 date: 2015-06-08 02:55:16 +0800
 --- 
 The problems below have been taken from [CodingBat's Python Exercises](http://codingbat.com/python), while all solutions were written by me. I've used `go fmt` and conducted tests for my codes, but please don't hold it against me if I've missed a few edge cases somewhere. All solutions are licensed under MIT.

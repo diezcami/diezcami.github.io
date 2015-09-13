@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CodingBat Exercises in Go: Logic-1, Logic-2"
+title: "CodingBat in Go: Logic-1, Logic-2"
 date: 2015-06-08 18:43:49 +0800
 --- 
 I've reached a certain peak of comfortability with Go at this point, and will no longer continue the CodingBat series on my blog. Thanks for tuning in!
