@@ -2,6 +2,7 @@
 layout: post
 title: "An Anticlimactic View on Front-end Development"
 date: 2015-05-28 18:40:32 +0800
+published: false
 --- 
 I'm writing this post today as I find myself, more often than not, debating on whether to concentrate on learning back-end or front-end development in preparation for my career. Here are my somewhat composed thoughts on the matter.
 

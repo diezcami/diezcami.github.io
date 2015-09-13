@@ -2,6 +2,7 @@
 layout: post
 title: "On Getting Burnt Out"
 date: 2015-08-16 07:23:43 +0800 
+published: false
 ---
 It's difficult to get really into programming without ongoing projects or a proper job. The latter's impossible due to my taking 24 units this semester as well as company culture in Manila; the former, however, just somehow feels ridiculously out of reach.
 

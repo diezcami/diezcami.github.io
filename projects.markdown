@@ -9,14 +9,13 @@ Coming soon!
 
 <p style="display: none">
 # Major Projects
-* **Project A**: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-* **Project B**: Quisque consectetur aliquet maximus. Vivamus fringilla eget lacus eget finibus. Nullam bibendum ligula id pharetra viverra.
-* **Project C**: Curabitur gravida magna quis turpis vehicula, eu tristique tellus eleifend.
+* **Project A**: An iOS widget app that displays a countdown summary of existing calendar events.
 
 # Casual Projects
-* **Project A**: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-* **Project B**: Quisque consectetur aliquet maximus. Vivamus fringilla eget lacus eget finibus. Nullam bibendum ligula id pharetra viverra.
-* **Project C**: Curabitur gravida magna quis turpis vehicula, eu tristique tellus eleifend.
+* **Project A**: A classic URL shortener that works on the diezcami.me domain. 
+* **Project B**: An OS X toolbar application that toggles the visibility of hidden files in a click or shortcut combination. 
+* **Project C**: A webapp that generates a summary of a Github user's pull requests.
+* **Hungry Birds**: A single player game resembling Asteroids. This is the first project I've ever worked on as a novice programmer.
 
 # Contributions
 You can view a summary of my contributions to various open source projects [here](#)!
