@@ -4,8 +4,11 @@ title: Projects
 permalink: /projects/
 notitle: true
 ---
-# Projects
-Coming soon!
+# Major Projects
+* Coming soon!
+
+# Casual Projects
+* [**AdMU-Graduates**](http://diezcami.github.io/admu-graduates/): A visualization of the employment statuses of Ateneo de Manila University graduates from 2010 to 2014. Built primarily using JS/d3. 
 
 <p style="display: none">
 # Major Projects
