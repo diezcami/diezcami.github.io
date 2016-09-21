@@ -4,4 +4,4 @@ title: Error 404
 permalink: /404.html
 exclude: true
 ---
-There's nothing here!
+There's nothing here! :(
