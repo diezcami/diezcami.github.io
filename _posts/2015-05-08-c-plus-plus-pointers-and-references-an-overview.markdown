@@ -5,8 +5,6 @@ date: 2015-05-08 11:33:15 +0800
 ---
 References and pointers are usually, in one way or another, implemented in every programming language; higher level languages, however, most likely do not provide explicit access to them. As a result, they often come up implicitly in the form of garbage collection and simpler OOP conventions. On the other hand, languages that have more freedom at lower levels such as C/C++ allow users to explicitly use pointers and references to manually control several aspects of a program including, but not limited to memory management/allocation, OOP and ease of access. 
 
-This guide is split into two parts - here, I'll be going through a basic overview on pointers and references understandable to anyone with knowledge on basic programming in any language and minor C++ syntax (mainly std, cout and endl).
-
 ## Pointers
 Every declared variable in a program, whether primitive or not, is stored in memory and has its own memory address in the form of a hexadecimal number (0x). These variables are normally accessed by identifiers they've been declared with, paying no attention to its location in memory. To access the memory address of a variable in C++, we use the referencing operator `&`.
 
@@ -20,15 +18,15 @@ A **Pointer** is a variable that holds a memory address. Its behavior is relatab
 ```
 int num = 10;
 int *foo;
-int bar*; 
+int bar*;
 std::cout << foo << std::endl; // output: 0x0 (null memory address)
 
-foo = &num; 
+foo = &num;
 std::cout << foo << std::endl; // output: memory address of num
 std::cout << *foo << std::endl; //output: 10
 ```
 
-Pointers are not limited to being assigned by memory addresses derived from the `&` operator - they can also be assigned with the memory addresses stored in other pointers. If a pointer is assigned to another pointer, any changes to the variable stored in the common memory address will reflect on the `*` operation of either pointer. This behavior is reminiscent of how objects are handled handled in Java; 
+Pointers are not limited to being assigned by memory addresses derived from the `&` operator - they can also be assigned with the memory addresses stored in other pointers. If a pointer is assigned to another pointer, any changes to the variable stored in the common memory address will reflect on the `*` operation of either pointer. This behavior is reminiscent of how objects are handled handled in Java;
 
 ```
 std::string qux = "Tempura";
@@ -63,7 +61,7 @@ It's important to note that either `delete` function is actually interpreted as 
 ```
 std::string *bar = new std::string;
 *bar = "..";
-std::cout << *bar << std::endl; 
+std::cout << *bar << std::endl;
 bar = null;
 ```
 
@@ -72,7 +70,7 @@ In the example above, the string `..` was initialized at the memory address stor
 ```
 std::string *bar = new std::string;
 *bar = "..";
-std::cout << *bar << std::endl; 
+std::cout << *bar << std::endl;
 delete bar; // deletes the object pointed to by bar, not bar itself
 bar = null
 ```
@@ -93,10 +91,10 @@ bar = 0;
 std::cout << bar << std::endl; // Output: 0x0 (null)
 ```
 
-Beyond the band-aid fix of setting a pointer to null, however, it would be better to modify the code in a way that there would be no need to set the pointer to null to begin with. 
+Beyond the band-aid fix of setting a pointer to null, however, it would be better to modify the code in a way that there would be no need to set the pointer to null to begin with.
 Most examples here are trivial and meant to showcase pointer syntax above anything else. In reality, pointers can be used in OOP and to allocate memory in more resource-hungry programs to maximise their performance.
 ## References
-A **Reference** holds another variable of the same declared type, and serves as its alias. Its behavior is relatable to how a person can (but may not) be referred to by multiple nicknames or aliases while maintaining one full name. It can be declared and must be defined using `data_type &identifier`. Similarly with `*`, note that the `&` used when declaring a reference is not the same as the referencing operator `&` used in the earlier examples. Unlike pointers, a reference cannot be null or re-assigned after being defined. 
+A **Reference** holds another variable of the same declared type, and serves as its alias. Its behavior is relatable to how a person can (but may not) be referred to by multiple nicknames or aliases while maintaining one full name. It can be declared and must be defined using `data_type &identifier`. Similarly with `*`, note that the `&` used when declaring a reference is not the same as the referencing operator `&` used in the earlier examples. Unlike pointers, a reference cannot be null or re-assigned after being defined.
 
 ```
 std::string foo = "..";

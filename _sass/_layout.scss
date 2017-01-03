@@ -2,12 +2,13 @@
  * ============================================== */
     .site-header {
         height: 55px;
-        background-color: #F5F5F5;
+        background-color: $header-color;
         position: relative;
         width: 100%;
+        border-bottom: 1px solid #DDD;
     }
 
-    .site-header a {color: $brand-color};
+    .site-header a {color: #535353};
 
     .site-nav {
         padding-top: 16px;
@@ -56,14 +57,14 @@
         }
 
         .page-link {
-            font-family: 'Open Sans';
-            font-weight: 700 !important;
+            font-family: $base-font-family;
+            font-weight: 100 !important;
             line-height: $base-line-height;
-            letter-spacing: 0.05em;
+            /*letter-spacing: 0.05em;*/
 
 
             &:not(:first-child) {
-                    margin-left: 20px;
+                margin-left: 20px;
             }
 
             &:hover {
@@ -78,7 +79,7 @@
         padding-bottom: 3em;
         margin: auto;
         font-size: 12px;
-        font-family: Open Sans;
+        font-family: $base-font-family;
         color: #959595;
     }
 
@@ -117,23 +118,21 @@
 
         > li {
             display: block;
-            padding: 0.1em 1.5em;
+            padding: 0.06em 1.5em;
         }
 
     }
 
     .post-link {
-        font-family: 'Open Sans';
-        font-weight: 300;
-        font-size: 1.5em;
-        letter-spacing: -1px;
+        font-family: $base-font-family;
+        font-weight: 100;
+        font-size: 1.4em;
         color: #454545;
-        display: block;
         text-align: left;
         width: 100%;
 
         @include media-query($on-palm) {
-            font-size: 1.33em;
+            font-size: 1.2em;
         }
 
         &:hover {
