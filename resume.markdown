@@ -5,14 +5,14 @@ permalink: /resume/
 notitle: true
 ---
 # Biography
-I’m a 22 year old university student taking up Computer Science in Manila. I love learning, building and doing just about anything with code. If I'm not developing projects, I'm probably studying for my  classes, cooking, hanging out with friends or taking a few [photos](http://diezcami.vsco.co). 
+I’m a 22 year old university student taking up Computer Science in Manila. I love learning, building and doing just about anything with code. If I'm not developing projects, I'm probably studying for my classes, cooking, hanging out with my friends, or taking a few [photos](http://diezcami.vsco.co). 
 
 # Skills
-I'm primarily interested in iOS and web development. I have ample experience in Swift and Objective-C for iOS development. I have designed and implemented the front-end of web applications using Javascript (JQuery), CSS (LESS/SASS), and HTML. I have also worked on the back-end of several projects by drafting databases (MySQL, PostgreSQL, NoSQL, MongoDB) and using frameworks such as PHP CodeIgniter (with RESTful), Ruby on Rails, and C# ASP .NET. I also have experience coding in Java, C++, Go, and Scheme/Lisp.
+I'm primarily interested in iOS and web development. I have ample experience in Swift and Objective-C for iOS development. I have designed and implemented the front-end of web applications using Javascript (JQuery), CSS (LESS/SASS), and HTML. I have also worked on the back-end of several projects by drafting databases (MySQL, PostgreSQL, NoSQL, MongoDB) and using frameworks such as PHP CodeIgniter (with RESTful), Ruby on Rails, and C# ASP.NET. I also have experience coding in Java, C++, Go, and Scheme/Lisp.
 
-Aside from programming, I have also spent a significant part of my university life participating in extracurricular activities. I enjoy managing and pioneering projects, especially in the company of a great team. I have led and significantly contributed to the success of several events such as Hackathons, workshops (i.e., Github Patchwork Manila), and outreach programs.
+Aside from programming, I have also spent a significant part of my university life participating in extracurricular activities. I enjoy managing and pioneering projects, especially in the company of a great team. I have led and significantly contributed to the success of several events such as Hackathons, workshops (i.e., Github Patchwork Manila), and outreach programs. 
 
-If you'd like to know more about my projects, you can download my resume below :)
+If you'd like to know more about my work, you can contact me or download my resume using the buttons below :)
 
 # Links
 <div style="text-align: left">
