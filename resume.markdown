@@ -5,22 +5,22 @@ permalink: /resume/
 notitle: true
 ---
 # Biography
-I’m a 22 year old university student taking up Computer Science in Manila. I love learning, building and doing just about anything with code. If I'm not developing projects, I'm probably studying for my classes, cooking, hanging out with my friends, or taking a few [photos](http://diezcami.vsco.co). 
+Hi, I'm Cami! I'm a 22y/o individual who's adjusting to life after college and enjoying every minute of it. I love cooking, taking photos, and hanging out with my friends. On a good day, you'll probably find me sitting in a cafe with my laptop and a cup of milk tea.
 
 # Skills
-I'm primarily interested in iOS and web development. I have ample experience in Swift and Objective-C for iOS development. I have designed and implemented the front-end of web applications using Javascript (JQuery), CSS (LESS/SASS), and HTML. I have also worked on the back-end of several projects by drafting databases (MySQL, PostgreSQL, NoSQL, MongoDB) and using frameworks such as PHP CodeIgniter (with RESTful), Ruby on Rails, and C# ASP.NET. I also have experience coding in Java, C++, Go, and Scheme/Lisp.
+I recently graduated from one of the top universities in the Philippines as a distinguished student leader with high academic honors. From a young age, I have been exposed to business operations and management strategies used in my family's business, giving me a strong background in business administrative processes. I am a highly competitive individual with a keen eye for detail who loves taking on challenges alongside other people.
 
-Aside from programming, I have also spent a significant part of my university life participating in extracurricular activities. I enjoy managing and pioneering projects, especially in the company of a great team. I have led and significantly contributed to the success of several events such as Hackathons, workshops (i.e., Github Patchwork Manila), and outreach programs. 
+As a developer, I have experience working with various frameworks and platforms (i.e., Mobile Apps, Web Apps, Systems). I have designed and implemented the front-end of several applications, as well as worked on the back-end of platforms by drafting databases (MySQL, PostgreSQL, NoSQL, MongoDB) and using frameworks such as PHP CodeIgniter (with RESTful), Ruby on Rails, and C# ASP.NET. Additionally, I have a specialization in data science and analytics, and have used platforms like RapidMiner and SAP for mining data, creating models, and deploying outputs.
 
-If you'd like to know more about my work, you can contact me or download my resume using the buttons below :)
+I'm primarily interested in organizational development and setting quality standards for business and software development through data-driven strategies. My specialties include software engineering, operations management, process streamlining, and data analysis. If you'd like to know more about my work, feel free to contact me or download my resume using the buttons below :-)
 
 # Links
 <div style="text-align: left">
     <a class="resume" href="{{ site.baseurl }}/resources/content/resume.pdf" target="_blank">
-      <i class="fa fa-download"></i> One Page Resume
+      <i class="fa fa-download"></i> One-Page Resume
     </a>
     <a class="link" href="mailto:diezcami@gmail.com" target="_blank">
-      <i class="fa fa-envelope"></i> Email
+      <i class="fa fa-envelope"></i> E-Mail
     </a>
     <a class="link" href='http://diezcami.vsco.co' target="_blank">
       <i class="fa fa-camera-retro"></i> VSCO

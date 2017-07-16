@@ -126,13 +126,13 @@
     .post-link {
         font-family: $base-font-family;
         font-weight: 100;
-        font-size: 1.4em;
+        font-size: 1.15em;
         color: #454545;
         text-align: left;
         width: 100%;
 
         @include media-query($on-palm) {
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         &:hover {
@@ -146,6 +146,7 @@
         color: $grey-color-light;
         text-transform: uppercase;
         display: inline-block;
+        padding-right: 5px;
     }
 
 /* Post Format
@@ -161,5 +162,6 @@
     }
 
     .post-content {
+        margin-top: -1em;
         margin-bottom: $spacing-unit;
     }
