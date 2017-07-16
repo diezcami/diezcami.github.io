@@ -9,7 +9,7 @@ twitter_username:
 github_username:  diezcami
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
