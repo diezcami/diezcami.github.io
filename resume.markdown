@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 notitle: true
 ---
-# Biography
+# About
 Hi, I'm Cami! I'm a 22y/o individual who's adjusting to life after college and enjoying every minute of it. I love cooking, taking photos, and hanging out with my friends. On a good day, you'll probably find me sitting in a cafe with my laptop and a cup of milk tea.
 
 # Skills
