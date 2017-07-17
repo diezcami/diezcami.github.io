@@ -5,7 +5,7 @@ permalink: /resume/
 notitle: true
 ---
 # About
-Hi, I'm Cami! I'm a 22y/o individual who's adjusting to life after college and enjoying every minute of it. I love cooking, taking photos, and hanging out with my friends. On a good day, you'll probably find me sitting in a cafe with my laptop and a cup of milk tea.
+Hi, I'm Cami! I'm a 22y/o individual who's adjusting to life after college and loving every minute of it. I enjoy cooking, reading, and hanging out with my friends. On a good day, you'll probably find me sitting in a cafe with my laptop and a cup of milk tea.
 
 # Skills
 I recently graduated from one of the top universities in the Philippines as a distinguished student leader with high academic honors. From a young age, I have been exposed to business operations and management strategies used in my family's business, giving me a strong background in business administrative processes. I am a highly competitive individual with a keen eye for detail who loves taking on challenges alongside other people.
